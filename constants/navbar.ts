@@ -18,22 +18,3 @@ export const navbarLinks: ILinks[] = [
     text: 'Articles',
   },
 ]
-
-export const SocialLinks: ILinks[] = [
-  {
-    link: userData.socialLinks.github,
-    text: 'GitHub',
-  },
-  {
-    link: userData.socialLinks.linkedin,
-    text: 'LinkedIn',
-  },
-  {
-    link: userData.socialLinks.twitter,
-    text: 'Twitter',
-  },
-  {
-    link: userData.socialLinks.instagram,
-    text: 'Instagram',
-  },
-]

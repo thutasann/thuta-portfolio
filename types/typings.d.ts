@@ -1,6 +1,7 @@
 interface ILinks {
   link: string
   text: string
+  icon?: React.FC
 }
 
 interface ICustomLink {
@@ -10,5 +11,5 @@ interface ICustomLink {
 }
 
 interface IIcons {
-  className: string
+  className?: string
 }

@@ -1,10 +1,13 @@
 'use client'
 
-import { navbarLinks, SocialLinks } from '@/constants/navbar'
+import userData from '@/constants/data'
+import { navbarLinks } from '@/constants/navbar'
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 import React from 'react'
+import { GithubIcon, LinkedInIcon, TwitterIcon } from '../icons'
 import Logo from '../logo'
+import { motion } from 'framer-motion'
 
 const CustomLinks = ({ href, title, className = '' }: ICustomLink) => {
   const path = usePathname()
@@ -31,12 +34,48 @@ export const NavBar = () => {
           <CustomLinks href={link.link} title={link.text} className='mx-4' key={idx} />
         ))}
       </nav>
-      <nav>
-        {SocialLinks.map((link, idx) => (
-          <Link href={link.link} key={idx} target='_blank' rel='noopener'>
-            {link.text}
-          </Link>
-        ))}
+      <nav className='flex items-center justify-center flex-wrap'>
+        <motion.a
+          whileHover={{
+            y: -2,
+          }}
+          whileTap={{
+            scale: 0.9,
+          }}
+          href={userData.socialLinks.github}
+          target='_blank'
+          rel='noopener'
+          className='w-6 mr-3'
+        >
+          <GithubIcon />
+        </motion.a>
+        <motion.a
+          whileHover={{
+            y: -2,
+          }}
+          whileTap={{
+            scale: 0.9,
+          }}
+          href={userData.socialLinks.linkedin}
+          target='_blank'
+          rel='noopener'
+          className='w-6 mx-3'
+        >
+          <LinkedInIcon />
+        </motion.a>
+        <motion.a
+          whileHover={{
+            y: -2,
+          }}
+          whileTap={{
+            scale: 0.9,
+          }}
+          href={userData.socialLinks.twitter}
+          target='_blank'
+          rel='noopener'
+        >
+          <TwitterIcon className='w-6 ml-3' />
+        </motion.a>
       </nav>
       <div className='absolute left-[50%] top-2 translate-x-[-50%]'>
         <Logo />
