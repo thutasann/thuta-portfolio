@@ -1,6 +1,7 @@
 import userData from '@/constants/data'
 import { Metadata } from 'next'
 import './globals.css'
+import { Poppins } from 'next/font/google'
 
 export const metadata: Metadata = {
   title: userData.about.metaTitle,
@@ -29,9 +30,15 @@ export const metadata: Metadata = {
   },
 }
 
+const poppin = Poppins({
+  weight: '600',
+  subsets: ['latin'],
+  display: 'swap',
+})
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang='en'>
+    <html lang='en' className={poppin.className}>
       <body>{children}</body>
     </html>
   )
