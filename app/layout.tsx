@@ -2,6 +2,7 @@ import userData from '@/constants/data'
 import { Metadata } from 'next'
 import './globals.css'
 import { Poppins } from 'next/font/google'
+import { NavBar } from '@/components/navbar'
 
 export const metadata: Metadata = {
   title: userData.about.metaTitle,
@@ -31,15 +32,20 @@ export const metadata: Metadata = {
 }
 
 const poppin = Poppins({
-  weight: '600',
+  weight: '500',
   subsets: ['latin'],
   display: 'swap',
 })
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang='en' className={poppin.className}>
-      <body>{children}</body>
+    <html lang='en'>
+      <body>
+        <main className={`${poppin.className} font-poppins bg-light w-full min-h-screen`}>
+          <NavBar />
+          {children}
+        </main>
+      </body>
     </html>
   )
 }
