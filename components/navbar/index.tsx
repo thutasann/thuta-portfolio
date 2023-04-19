@@ -3,7 +3,7 @@
 import userData from '@/constants/data'
 import { navbarLinks } from '@/constants/navbar'
 import Link from 'next/link'
-import { usePathname, useRouter } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 import React from 'react'
 import { GithubIcon, LinkedInIcon, TwitterIcon } from '../icons'
 import Logo from '../logo'
@@ -45,6 +45,7 @@ export const NavBar = () => {
           href={userData.socialLinks.github}
           target='_blank'
           rel='noopener'
+          aria-label='ThutaDev GitHub'
           className='w-6 mr-3'
         >
           <GithubIcon />
@@ -59,6 +60,7 @@ export const NavBar = () => {
           href={userData.socialLinks.linkedin}
           target='_blank'
           rel='noopener'
+          aria-label='ThutaDev LinkedIn'
           className='w-6 mx-3'
         >
           <LinkedInIcon />
@@ -72,6 +74,7 @@ export const NavBar = () => {
           }}
           href={userData.socialLinks.twitter}
           target='_blank'
+          aria-label='ThutaDev Twitter'
           rel='noopener'
         >
           <TwitterIcon className='w-6 ml-3' />

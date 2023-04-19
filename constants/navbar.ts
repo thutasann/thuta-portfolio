@@ -1,5 +1,3 @@
-import userData from './data'
-
 export const navbarLinks: ILinks[] = [
   {
     link: '/',

@@ -13,3 +13,8 @@ interface ICustomLink {
 interface IIcons {
   className?: string
 }
+
+interface IAnimatedtext {
+  text: string
+  className?: string
+}
