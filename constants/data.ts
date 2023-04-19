@@ -170,6 +170,7 @@ const userData = {
     },
   ],
   about: {
+    metaTitle: 'Thuta Sann | Frontend Dev',
     title:
       "I'm a developer that loves building NEXTJS, ANGULAR & SpringBoot and IOS Mobile apps. Also loves building UI/UX with TailwindCSS, Material UI, ChakraUI, etc",
     description: [
