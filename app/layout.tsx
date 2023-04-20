@@ -3,6 +3,7 @@ import { Metadata } from 'next'
 import './globals.css'
 import { Poppins } from 'next/font/google'
 import { NavBar } from '@/components/navbar'
+import Footer from '@/components/footer'
 
 export const metadata: Metadata = {
   title: userData.about.metaTitle,
@@ -44,6 +45,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main className={`${poppin.className} font-poppins bg-light w-full min-h-screen`}>
           <NavBar />
           {children}
+          <Footer />
         </main>
       </body>
     </html>
