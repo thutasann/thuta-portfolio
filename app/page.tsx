@@ -1,4 +1,5 @@
 import { AnimatedText } from '@/components/animated-text'
+import HireMe from '@/components/hire-me'
 import { LinkArrow } from '@/components/icons'
 import Layout from '@/components/layout'
 import { textData } from '@/constants/texts'
@@ -17,6 +18,7 @@ export default function Home() {
               alt='thutadev'
               width={1920}
               height={1920}
+              loading='lazy'
               style={{ transform: 'translate3d(0, 0, 0)' }}
               placeholder='blur'
               blurDataURL='/thutadev.webp'
@@ -36,6 +38,7 @@ export default function Home() {
           </div>
         </div>
       </Layout>
+      <HireMe />
     </main>
   )
 }
