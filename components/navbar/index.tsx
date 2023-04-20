@@ -13,7 +13,7 @@ const CustomLinks = ({ href, title, className = '' }: ICustomLink) => {
   const path = usePathname()
 
   return (
-    <Link href={href} className={`${className} relative group`}>
+    <Link href={href} className={`${className} relative group uppercase text-[15px] font-[600] text-dark/90`}>
       {title}
       <span
         className={`h-[1px] inline-block bg-dark absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 ${
@@ -28,7 +28,7 @@ const CustomLinks = ({ href, title, className = '' }: ICustomLink) => {
 
 export const NavBar = () => {
   return (
-    <header className='w-full px-32 py-8 font-medium flex items-center justify-between'>
+    <header className='sticky z-[1000] top-0 w-full px-32 py-7 font-medium flex items-center justify-between nav backdrop-blur-[9px]'>
       <nav>
         {navbarLinks.map((link, idx) => (
           <CustomLinks href={link.link} title={link.text} className='mx-4' key={idx} />

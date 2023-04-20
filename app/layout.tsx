@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description: userData.about.title,
   keywords: userData.about.keywords,
   openGraph: {
-    images: '/thutasann.jpeg',
+    images: '/thutadev.jpeg',
     type: 'website',
     url: 'https://thutadev.vercel.app/',
     locale: 'en',
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     images: '/thutasann-og.webp',
   },
   icons: {
-    icon: '/thutasann.jpeg',
+    icon: '/thutadev.jpeg',
   },
 }
 

@@ -2,25 +2,24 @@ const userData = {
   githubUsername: 'thutasann',
   name: 'THUTA SANN',
   designation: 'PASSIONATE CODER',
-  avatarUrl: '/thutasann.jpeg',
   email: 'thutasann2002@gmail.com',
   phone: '+95 9895388882',
   address: 'S/Okkalpa, Yangon, Myanmar',
   projects: [
-    // {
-    //   id: 1,
-    //   category: 'WEB3.0',
-    //   title: "Coinbase Blockchain app",
-    //   link: "https://coinbase-tts.vercel.app/",
-    //   imgUrl: "/coinbase.png",
-    // },
-    // {
-    //   id: 2,
-    //   category: 'WEB3.0',
-    //   title: "Uniswap Blockchain app",
-    //   link: "https://uniswap-thuta-thutasan.vercel.app/",
-    //   imgUrl: "/uniswap.png",
-    // },
+    {
+      id: 1,
+      category: 'WEB3.0',
+      title: 'Coinbase Blockchain app',
+      link: 'https://coinbase-tts.vercel.app/',
+      imgUrl: '/coinbase.png',
+    },
+    {
+      id: 2,
+      category: 'WEB3.0',
+      title: 'Uniswap Blockchain app',
+      link: 'https://uniswap-thuta-thutasan.vercel.app/',
+      imgUrl: '/uniswap.png',
+    },
     {
       id: 3,
       category: 'React.js',
@@ -28,13 +27,13 @@ const userData = {
       link: 'http://edubase-d4c34.web.app/',
       imgUrl: '/edubase.png',
     },
-    // {
-    //   id: 4,
-    //   category: 'React.js',
-    //   title: "Ex Portfolio site",
-    //   link: "https://thutasann.herokuapp.com/",
-    //   imgUrl: "/oldportfolio.png",
-    // },
+    {
+      id: 4,
+      category: 'React.js',
+      title: 'Ex Portfolio site',
+      link: 'https://thutasann.herokuapp.com/',
+      imgUrl: '/oldportfolio.png',
+    },
     {
       id: 5,
       category: 'Next.js',
@@ -56,13 +55,13 @@ const userData = {
       link: 'https://clone-e131e.web.app/',
       imgUrl: '/gmailclone.png',
     },
-    // {
-    //   id: 8,
-    //   category: 'Next.js',
-    //   title: "Twitter Clone",
-    //   link: "https://twitter-clone-thutasann.vercel.app/",
-    //   imgUrl: "/twitterclone.png",
-    // },
+    {
+      id: 8,
+      category: 'Next.js',
+      title: 'Twitter Clone',
+      link: 'https://twitter-clone-thutasann.vercel.app/',
+      imgUrl: '/twitterclone.png',
+    },
     {
       id: 9,
       category: 'React.js',
@@ -70,13 +69,13 @@ const userData = {
       link: 'https://linkedin-3ea13.web.app/',
       imgUrl: '/linkedinclone.png',
     },
-    // {
-    //   id: 10,
-    //   category: 'React Native',
-    //   title: "React Native Signal Clone",
-    //   link: "https://signal-clone-b6a27.web.app/",
-    //   imgUrl: "/rnclone.png"
-    // },
+    {
+      id: 10,
+      category: 'React Native',
+      title: 'React Native Signal Clone',
+      link: 'https://signal-clone-b6a27.web.app/',
+      imgUrl: '/rnclone.png',
+    },
     {
       id: 11,
       category: 'Next.js',
@@ -176,8 +175,8 @@ const userData = {
     description: [
       `I've been developing websites since I was 18 years old. I started my web development career with HTML, CSS and PHP. and After PHP, I've learnt Laravel web Framework.`,
       `After learning HTML and struggling with CSS, I came up with a brilliant idea of using Bootstrap and Tailwind so that I don't have to style everything by myself and - for obvious reasons - if you knew Tailwind, you were cool. 👽`,
-      `But now, I've been coding in React.js, React Native, Next.js, Nest.js MongoDB, MySQL, Bootstrap, Tailwind, PHP,  programmings language etc to name a few. Although I barely know the syntax (Psst, Stack overflow!), I consider myself a Ninja developer I'm laughing right now.
-      Now, I am currently exploring Swift Programming Language as a IOS Development & Spring Boot Framework as a Backend Development for Microservices.`,
+      `But now, I've been coding in React.js, React Native, Nextjs, Nestjs, MongoDB, MySQL, Tailwind, Flutter programming languages etc to name a few. Although I barely know the syntax (Psst, Stack overflow!), I consider myself a Ninja developer I'm laughing right now.
+      Now, I am currently exploring Flutter Programming Language as a Mobile Development & Spring Boot Framework as a Backend Development for Microservices meanwhile Exploring deeply to NextJs.`,
     ],
     keywords: ['Thuta Sann', 'thutadev', 'Thuta Dev', 'Thutasann Developer'],
     currentProject: 'UIKit Netflix Clone',
