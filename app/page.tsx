@@ -4,6 +4,7 @@ import Layout from '@/components/layout'
 import { textData } from '@/constants/texts'
 import Image from 'next/image'
 import Link from 'next/link'
+import logo from '../public/thutadev.webp'
 
 export default function Home() {
   return (
@@ -12,14 +13,13 @@ export default function Home() {
         <div className='flex items-center justify-between w-full'>
           <div className='w-1/2'>
             <Image
-              src='/thutadev.webp'
+              src={logo}
               alt='thutadev'
-              className='w-full h-auto rounded-md'
               width={1920}
               height={1920}
-              loading='eager'
-              priority
-              quality={100}
+              style={{ transform: 'translate3d(0, 0, 0)' }}
+              placeholder='blur'
+              blurDataURL='/thutadev.webp'
             />
           </div>
           <div className='w-1/2 flex flex-col items-center self-center'>

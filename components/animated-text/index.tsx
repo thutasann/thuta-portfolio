@@ -11,7 +11,7 @@ export const AnimatedText: React.FC<IAnimatedtext> = ({ text, className }): JSX.
         variants={quote}
         initial='initial'
         animate='animate'
-        className={`inline-block w-full text-dark font-[800] capitalize text-8xl ${className} `}
+        className={`inline-block w-full text-dark font-[900] capitalize text-8xl ${className} `}
       >
         {text.split(' ').map((word, index) => (
           <motion.span key={word + '-' + index} className='inline-block' variants={quoteSingleWord}>

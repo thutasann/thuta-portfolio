@@ -5,6 +5,9 @@
 html {
   @apply scroll-smooth;
 }
+*::selection {
+  @apply bg-dark text-white;
+}
 
 .btnResume {
   @apply flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-bold hover:bg-light hover:text-dark cursor-pointer border border-solid border-transparent hover:border-dark transition-all duration-300 ease-in-out;
