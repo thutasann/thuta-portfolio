@@ -1,11 +1,11 @@
 import { AnimatedText } from '@/components/animated-text'
+import BlurImage from '@/components/blur-image'
 import HireMe from '@/components/hire-me'
 import { LinkArrow } from '@/components/icons'
 import Layout from '@/components/layout'
 import { textData } from '@/constants/texts'
 import Image from 'next/image'
 import Link from 'next/link'
-import logo from '../public/thutadev.webp'
 
 export default function Home() {
   return (
@@ -13,16 +13,7 @@ export default function Home() {
       <Layout className='pt-0'>
         <div className='flex items-center justify-between w-full'>
           <div className='w-1/2'>
-            <Image
-              src={logo}
-              alt='thutadev'
-              width={1920}
-              height={1920}
-              loading='lazy'
-              style={{ transform: 'translate3d(0, 0, 0)' }}
-              placeholder='blur'
-              blurDataURL='/thutadev.webp'
-            />
+            <BlurImage src='/thutadev.webp' alt='thutadev' width={1920} height={1920} />
           </div>
           <div className='w-1/2 flex flex-col items-center self-center'>
             <AnimatedText text={textData.bannerText.title} className='!text-6xl !text-left' />

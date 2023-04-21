@@ -5,7 +5,7 @@ import React, { useEffect, useRef } from 'react'
 
 const statistics = [
   {
-    count: 50,
+    count: 1.5,
     title: 'Coding Years',
   },
   {

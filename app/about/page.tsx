@@ -1,11 +1,11 @@
 import { AnimatedText } from '@/components/animated-text'
+import BlurImage from '@/components/blur-image'
 import Layout from '@/components/layout'
+import Skills from '@/components/skills'
 import Statistics from '@/components/statistics'
 import userData from '@/constants/data'
 import { Metadata } from 'next'
-import Image from 'next/image'
 import React from 'react'
-import profilePic from '../../public/thutadev.jpeg'
 
 export const metadata: Metadata = {
   title: 'About | Thuta Sann',
@@ -52,20 +52,12 @@ const AboutPage = () => {
 
             <div className='col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light p-8'>
               <div className='absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark' />
-              <Image
-                src={profilePic}
-                alt='Thuta Sann'
-                className='rounded-2xl'
-                width={2448}
-                height={3264}
-                loading='lazy'
-                placeholder='blur'
-                blurDataURL='/thutadev.jpeg'
-              />
+              <BlurImage src='/thutadev.jpeg' alt='thutadev' className='rounded-2xl' width={2448} height={3264} />
             </div>
 
             <Statistics />
           </div>
+          <Skills />
         </Layout>
       </main>
     </>
