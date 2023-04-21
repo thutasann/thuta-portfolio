@@ -2,6 +2,7 @@
   "name": "thuta-portfolio",
   "version": "0.1.0",
   "private": true,
+  "author": "thuta_sann<thutasann2002@gmail.com>",
   "scripts": {
     "dev": "PORT=3001 next dev",
     "build": "next build",
