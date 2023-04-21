@@ -257,4 +257,60 @@ const userData = {
   },
 }
 
+export const SkillsData: ISkill[] = [
+  {
+    name: 'Web',
+    x: '',
+    y: '',
+    isWeb: true,
+  },
+  {
+    name: 'ReactJs',
+    x: '-20vw',
+    y: '6vw',
+  },
+  {
+    name: 'GatsbyJS',
+    x: '-20vw',
+    y: '-2vw',
+  },
+  {
+    name: 'NextJS',
+    x: '-15vw',
+    y: '-10vw',
+  },
+  {
+    name: 'TailWindCSS',
+    x: '20vw',
+    y: '6vw',
+  },
+  {
+    name: 'Typescript',
+    x: '0vw',
+    y: '-10vw',
+  },
+  {
+    name: 'NodeJS',
+    x: '0vw',
+    y: '-20vw',
+  },
+  {
+    name: 'MongoDB',
+    x: '15vw',
+    y: '-10vw',
+  },
+
+  {
+    name: 'Firebase',
+    x: '20vw',
+    y: '-3vw',
+  },
+
+  {
+    name: 'Git',
+    x: '0vw',
+    y: '12vw',
+  },
+]
+
 export default userData

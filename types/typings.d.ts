@@ -18,3 +18,10 @@ interface IAnimatedtext {
   text: string
   className?: string
 }
+
+interface ISkill {
+  name: string
+  x: string
+  y: string
+  isWeb?: boolean
+}
