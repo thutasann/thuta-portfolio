@@ -7,7 +7,12 @@ import { SkillsData } from '@/constants/data'
 const Skills = (): JSX.Element => {
   return (
     <>
-      <h2 className='font-[900] text-8xl mt-52 w-full text-center'>Skills</h2>
+      <h2
+        className='
+      section-title'
+      >
+        Skills
+      </h2>
       <div className='mt-3 w-[90%]  mx-auto h-screen relative flex items-center justify-center rounded-full bg-circularLight'>
         {SkillsData.map(({ name, x, y, isWeb }, idx) => (
           <Skill key={idx} name={name} x={x} y={y} isWeb={isWeb} />

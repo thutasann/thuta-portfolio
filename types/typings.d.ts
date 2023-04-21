@@ -25,3 +25,12 @@ interface ISkill {
   y: string
   isWeb?: boolean
 }
+
+interface IExperience {
+  position: string
+  company: string
+  companyLink: string
+  time: string
+  address: string
+  work: string
+}

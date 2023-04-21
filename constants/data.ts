@@ -182,14 +182,7 @@ const userData = {
     currentProject: 'UIKit Netflix Clone',
     currentProjectUrl: 'https://www.linkedin.com/feed/update/urn:li:activity:6997520383801270272/',
   },
-  experience: [
-    {
-      title: 'Frontend Developer',
-      company: 'Codigo Mobile & Web App Development Company',
-      year: '2022 - Present',
-      companyLink: 'https://www.codigo.co/',
-      desc: 'Frontend Developer who is responsible for Website Development and PWA Development with ReactJS and NextJS',
-    },
+  education: [
     {
       title: 'Global High Achiever Award',
       company: 'NCC Education',
@@ -198,32 +191,11 @@ const userData = {
       desc: "I'm glad to announce that I am awarded the Global High Achiever Award From the NCC Education (UK).",
     },
     {
-      title: 'Junior Developer',
-      company: 'Yoma Bank Ltd',
-      year: '2022',
-      companyLink: 'https://yomabank.com/',
-      desc: 'Web Developer who is responsible for building web application with Angular and Spring boot',
-    },
-    {
-      title: 'Frontend Developer',
-      company: 'Digital Laboratory',
-      year: '2022',
-      companyLink: 'https://digitallaboratory.net/',
-      desc: 'Frontend Developer who is responsible for building website with Gatsby.js, Nextjs, WordPress, Strapi',
-    },
-    {
       title: 'Graduation',
       company: 'University of Greenwich',
       year: '2022',
       companyLink: 'https://www.gre.ac.uk/',
       desc: 'Qualified BSc (Hons) in Computing from University of Greenwich',
-    },
-    {
-      title: 'Freelance Web Developer',
-      company: 'Self-employed',
-      year: '2021',
-      companyLink: 'https://thutasann.herokuapp.com/',
-      desc: 'Developed ReactJS websites as a Freelance developer',
     },
     {
       title: 'Level 5 Diploma in Computing',
@@ -256,6 +228,41 @@ const userData = {
     facebook: 'https://www.facebook.com/thuta.sann.52',
   },
 }
+
+export const experiences: IExperience[] = [
+  {
+    position: 'Frontend Developer',
+    company: 'Codigo',
+    companyLink: 'https://www.codigo.co/',
+    time: '2022 - Present',
+    address: 'Singapore',
+    work: 'Frontend Developer who is responsible for Website Development and PWA Development with ReactJS and NextJS.',
+  },
+  {
+    position: 'Junior Developer',
+    company: 'Yoma Bank Ltd',
+    companyLink: 'https://yomabank.com/',
+    time: '2022',
+    address: 'Myanmar',
+    work: 'Web Developer who is responsible for building Banking system web application with AngularTS.',
+  },
+  {
+    position: 'Frontend Developer',
+    company: 'Digital Laboratory',
+    companyLink: 'https://digitallaboratory.net/',
+    time: '2022',
+    address: 'Myanmar',
+    work: 'Frontend Developer who is responsible for building Frontend websites with Gatsby.js, Nextjs, WordPress, Strapi.',
+  },
+  {
+    position: 'Freelance Developer',
+    company: 'self employed',
+    companyLink: 'https://thutadev.vercel.app/',
+    time: '2021 - 2022',
+    address: 'Myanmar',
+    work: 'Freelance Web Developer who is responsible for crafting websites along with UI/UX Design.',
+  },
+]
 
 export const SkillsData: ISkill[] = [
   {
@@ -309,7 +316,7 @@ export const SkillsData: ISkill[] = [
   {
     name: 'Git',
     x: '0vw',
-    y: '12vw',
+    y: '10vw',
   },
 ]
 

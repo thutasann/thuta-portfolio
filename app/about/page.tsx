@@ -1,5 +1,6 @@
 import { AnimatedText } from '@/components/animated-text'
 import BlurImage from '@/components/blur-image'
+import Experience from '@/components/experience'
 import Layout from '@/components/layout'
 import Skills from '@/components/skills'
 import Statistics from '@/components/statistics'
@@ -58,6 +59,7 @@ const AboutPage = () => {
             <Statistics />
           </div>
           <Skills />
+          <Experience />
         </Layout>
       </main>
     </>
