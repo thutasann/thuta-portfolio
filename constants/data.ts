@@ -182,43 +182,7 @@ const userData = {
     currentProject: 'UIKit Netflix Clone',
     currentProjectUrl: 'https://www.linkedin.com/feed/update/urn:li:activity:6997520383801270272/',
   },
-  education: [
-    {
-      title: 'Global High Achiever Award',
-      company: 'NCC Education',
-      year: '2022',
-      companyLink: 'https://www.nccedu.com/',
-      desc: "I'm glad to announce that I am awarded the Global High Achiever Award From the NCC Education (UK).",
-    },
-    {
-      title: 'Graduation',
-      company: 'University of Greenwich',
-      year: '2022',
-      companyLink: 'https://www.gre.ac.uk/',
-      desc: 'Qualified BSc (Hons) in Computing from University of Greenwich',
-    },
-    {
-      title: 'Level 5 Diploma in Computing',
-      company: 'NCC Education',
-      year: '2020',
-      companyLink: 'https://www.nccedu.com/',
-      desc: 'Qualified Level 5 Diploma in Computing from NCC Education',
-    },
-    {
-      title: 'Level 4 Diploma in Computing',
-      company: 'NCC Education',
-      year: '2019',
-      companyLink: 'https://www.nccedu.com/',
-      desc: 'Qualified Level 4 Diploma in Computing from NCC Education',
-    },
-    {
-      title: 'Matriculation',
-      company: 'No(1) B.E.H.S Thingangyun',
-      year: '2018',
-      companyLink: '#',
-      desc: 'Matriculated with Flying colors',
-    },
-  ],
+
   resumeUrl: 'https://drive.google.com/file/d/11CVNmYzbdW2OCROig8gHbPJvThP9mMZB/view?usp=sharing',
   socialLinks: {
     instagram: 'https://www.instagram.com/thuta_sann/',
@@ -261,6 +225,44 @@ export const experiences: IExperience[] = [
     time: '2021 - 2022',
     address: 'Myanmar',
     work: 'Freelance Web Developer who is responsible for crafting websites along with UI/UX Design.',
+  },
+]
+
+export const educations: IEducation[] = [
+  {
+    type: 'Global High Achiever Award',
+    place: 'NCC Education',
+    time: '2022',
+    link: 'https://www.nccedu.com/',
+    info: "I'm glad to announce that I am awarded the Global High Achiever Award From the NCC Education (UK).",
+  },
+  {
+    type: 'Graduation',
+    place: 'University of Greenwich',
+    time: '2022',
+    link: 'https://www.gre.ac.uk/',
+    info: 'Qualified BSc (Hons) in Computing from University of Greenwich',
+  },
+  {
+    type: 'Level 5 Diploma in Computing',
+    place: 'NCC Education',
+    time: '2020',
+    link: 'https://www.nccedu.com/',
+    info: 'Qualified Level 5 Diploma in Computing from NCC Education',
+  },
+  {
+    type: 'Level 4 Diploma in Computing',
+    place: 'NCC Education',
+    time: '2019',
+    link: 'https://www.nccedu.com/',
+    info: 'Qualified Level 4 Diploma in Computing from NCC Education',
+  },
+  {
+    type: 'Matriculation',
+    place: 'No(1) B.E.H.S Thingangyun',
+    time: '2018',
+    link: 'https://www.facebook.com/profile.php?id=100064211914161',
+    info: 'Matriculated with Flying colors',
   },
 ]
 

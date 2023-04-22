@@ -34,3 +34,11 @@ interface IExperience {
   address: string
   work: string
 }
+
+interface IEducation {
+  type: string
+  time: string
+  place: string
+  info: string
+  link: string
+}
