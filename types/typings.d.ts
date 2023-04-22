@@ -42,3 +42,13 @@ interface IEducation {
   info: string
   link: string
 }
+
+interface IProject {
+  id: number
+  category: string
+  title: string
+  link: string
+  imgUrl: string
+  github?: string
+  summary?: string
+}

@@ -1,7 +1,12 @@
+import { AnimatedText } from '@/components/animated-text'
 import React from 'react'
 
 const Articles = () => {
-  return <div>Articles</div>
+  return (
+    <>
+      <AnimatedText text='Articles' />
+    </>
+  )
 }
 
 export default Articles

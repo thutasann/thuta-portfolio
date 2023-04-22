@@ -19,7 +19,7 @@ export const TwitterIcon = ({ className, ...rest }: IIcons) => (
     />
   </svg>
 )
-// #0A66C2
+
 export const LinkedInIcon = ({ className, ...rest }: IIcons) => (
   <svg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 256 256' {...rest} className={`w-full h-auto ${className}`}>
     <path fill='none' d='M0 0h256v256H0z' />

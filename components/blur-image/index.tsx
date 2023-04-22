@@ -11,11 +11,12 @@ interface IBlurImage {
   src: string
   alt: string
   className?: string
-  width: number
-  height: number
+  width?: number
+  height?: number
+  fill?: boolean
 }
 
-function BlurImage({ src, alt, className, width, height, ...props }: IBlurImage): JSX.Element {
+function BlurImage({ src, alt, fill, className, width, height, ...props }: IBlurImage): JSX.Element {
   const [isLoading, setLoading] = useState(true)
 
   return (
@@ -29,6 +30,7 @@ function BlurImage({ src, alt, className, width, height, ...props }: IBlurImage)
       className={cn('transition-all duration-700 ease-in-out', isLoading ? 'blur-md' : 'blur-0', className!)}
       onLoadingComplete={() => setLoading(false)}
       alt={alt}
+      fill={fill}
     />
   )
 }
