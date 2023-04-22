@@ -132,7 +132,7 @@ export const projects: IProject[] = [
   {
     id: 20,
     category: 'SwiftUI',
-    title: 'UBER UI',
+    title: 'SwiftUI UBER App',
     link: 'https://github.com/thutasann/swiftui-UBER-rebuild#readme',
     imgUrl: '/projects/swift-ui-uber.png',
     github: 'https://github.com/thutasann/swiftui-UBER-rebuild',

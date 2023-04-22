@@ -4,9 +4,9 @@ import { GithubIcon } from '@/components/icons'
 import Layout from '@/components/layout'
 import userData, { projects } from '@/constants/data'
 import { Metadata } from 'next'
-import Image from 'next/image'
-import Link from 'next/link'
 import React from 'react'
+
+export const revalidate = 30
 
 export const metadata: Metadata = {
   title: 'Projects | Thuta Sann',
@@ -86,11 +86,11 @@ const FeaturedProject = ({ summary, category, imgUrl, link, title, github }: IPr
         aria-label={'thutadev projects' + title}
         className='w-1/2 cursor-pointer overflow-hidden relative rounded-lg  h-[300px]'
       >
-        <BlurImage src={imgUrl} alt={title} fill className='hover:scale-110' />
+        <BlurImage src={imgUrl} alt={title} width={2844} height={1578} className='hover:scale-110' />
       </a>
 
       <div className='w-1/2 flex flex-col items-start justify-between pl-6'>
-        <span className='text-primary font-medium text-xl'>{category}</span>
+        <span className='bg-dark text-light px-3 py-1 font-bold rounded-md text-lg'>{category}</span>
         <a
           href={link}
           target='_blank'
