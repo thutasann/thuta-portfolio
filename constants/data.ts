@@ -44,6 +44,14 @@ export const projects: IProject[] = [
       'This is the Educational Idea Sharing app named Edubase where people can share their idea like a social media with secure role-based system.',
   },
   {
+    id: 2,
+    category: 'MERN Stack',
+    title: 'MERN Chat + Game App',
+    link: 'https://mern-t-chat.vercel.app/',
+    imgUrl: '/projects/mern-chat.png',
+    github: 'https://github.com/thutasann/mern-chat',
+  },
+  {
     id: 5,
     category: 'Next.js',
     title: 'Current Portfolio site',

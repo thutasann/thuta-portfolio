@@ -2,6 +2,7 @@ import { AnimatedText } from '@/components/animated-text'
 import BlurImage from '@/components/blur-image'
 import { GithubIcon } from '@/components/icons'
 import Layout from '@/components/layout'
+import ProjectLink from '@/components/project-link'
 import userData, { projects } from '@/constants/data'
 import { Metadata } from 'next'
 import React from 'react'
@@ -53,22 +54,48 @@ const Projects = () => {
                 github={projects[0].github}
               />
             </div>
-            <div className='col-span-6'>Project 1</div>
-            <div className='col-spannn-6'>Project 2</div>
+            <div className='col-span-6'>
+              <Project
+                category={projects[1].category}
+                title={projects[1].title}
+                link={projects[1].link}
+                imgUrl={projects[1].imgUrl}
+                github={projects[1].github}
+              />
+            </div>
+            <div className='col-span-6'>
+              <Project category={projects[8].category} title={projects[8].title} link={projects[8].link} imgUrl={projects[8].imgUrl} />
+            </div>
 
             <div className='col-span-12'>
               <FeaturedProject
-                id={projects[12].id}
-                category={projects[12].category}
-                title={projects[12].title}
-                link={projects[12].link}
-                imgUrl={projects[12].imgUrl}
-                summary={projects[12].summary}
-                github={projects[12].github}
+                id={projects[13].id}
+                category={projects[13].category}
+                title={projects[13].title}
+                link={projects[13].link}
+                imgUrl={projects[13].imgUrl}
+                summary={projects[13].summary}
+                github={projects[13].github}
               />
             </div>
-            <div className='col-span-6'>Project 3</div>
-            <div className='col-spannn-6'>Project 4</div>
+            <div className='col-span-6'>
+              <Project
+                category={projects[3].category}
+                title={projects[3].title}
+                link={projects[3].link}
+                imgUrl={projects[3].imgUrl}
+                github={projects[3].github}
+              />
+            </div>
+            <div className='col-span-6'>
+              <Project
+                category={projects[4].category}
+                title={projects[4].title}
+                link={projects[4].link}
+                imgUrl={projects[4].imgUrl}
+                github={projects[4].github}
+              />
+            </div>
           </div>
         </Layout>
       </main>
@@ -78,7 +105,9 @@ const Projects = () => {
 
 const FeaturedProject = ({ summary, category, imgUrl, link, title, github }: IProject): JSX.Element => {
   return (
-    <article className='w-full flex items-center justify-center rounded-3xl border border-solid border-dark bg-light shadow-2xl relative p-6'>
+    <article className='w-full flex items-center justify-center rounded-[2rem] border border-solid border-dark bg-light shadow-2xl relative p-6'>
+      <div className='absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-br-3xl  rounded-[2rem] bg-dark' />
+
       <a
         href={link}
         target='_blank'
@@ -107,22 +136,51 @@ const FeaturedProject = ({ summary, category, imgUrl, link, title, github }: IPr
             <GithubIcon className='hover:opacity-80' />
           </a>
 
+          <ProjectLink link={link} title={title} />
+        </div>
+      </div>
+    </article>
+  )
+}
+
+const Project = ({ category, imgUrl, title, link, github }: IProject) => {
+  return (
+    <article className='relative w-full flex flex-col items-center justify-center rounded-[2rem] border border-solid border-dark bg-light p-6'>
+      <div className='absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-br-3xl rounded-[2rem] bg-dark' />
+
+      <a
+        href={link}
+        target='_blank'
+        rel='noopener'
+        aria-label={'thutadev projects' + title}
+        className='w-full cursor-pointer overflow-hidden relative rounded-lg  h-[300px]'
+      >
+        <BlurImage src={imgUrl} alt={title} width={2844} height={1578} className='hover:scale-110' />
+      </a>
+
+      <div className='w-full mt-4 flex flex-col items-start justify-between'>
+        <span className='bg-dark text-light px-3 py-1 font-bold rounded-md text-lg'>{category}</span>
+        <a
+          href={link}
+          target='_blank'
+          rel='noopener'
+          aria-label={'thutadev projects' + title}
+          className='hover:underline underline-offset-2'
+        >
+          <h2 className='my-2 w-full text-left text-4xl font-[800]'>{title}</h2>
+        </a>
+
+        <div className=' w-full flex items-center justify-between mt-4 gap-4'>
+          <ProjectLink link={link} title={title} />
+
           <a
-            href={link}
+            href={github}
             target='_blank'
             rel='noopener'
             aria-label={'thutadev projects' + title}
-            className='focus:outline-none cursor-pointer relative inline-block text-lg group'
+            className={`w-10 ${!github && 'cursor-not-allowed'}`}
           >
-            <span className='relative z-10 block px-5 py-3 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-dark rounded-lg group-hover:text-white'>
-              <span className='absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-gray-50'></span>
-              <span className='absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-dark group-hover:-rotate-180 ease'></span>
-              <span className='relative'>View Project</span>
-            </span>
-            <span
-              className='absolute bottom-0 right-0 w-full h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-dark rounded-lg group-hover:mb-0 group-hover:mr-0'
-              data-rounded='rounded-lg'
-            ></span>
+            <GithubIcon className={`${github ? 'hover:opacity-80' : 'opacity-50'}`} />
           </a>
         </div>
       </div>

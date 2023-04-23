@@ -44,7 +44,7 @@ interface IEducation {
 }
 
 interface IProject {
-  id: number
+  id?: number
   category: string
   title: string
   link: string
