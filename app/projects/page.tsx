@@ -132,7 +132,7 @@ const FeaturedProject = ({ summary, category, imgUrl, link, title, github }: IPr
         <p className='my-2 font-medium text-dark'>{summary}</p>
 
         <div className='mt-2 flex items-center justify-center gap-4'>
-          <a href={github} target='_blank' rel='noopener' aria-label={'thutadev projects' + title} className='w-10'>
+          <a href={github} target='_blank' rel='noopener' aria-label={'thutadev projects ' + title} className='w-10'>
             <GithubIcon className='hover:opacity-80' />
           </a>
 
@@ -173,15 +173,21 @@ const Project = ({ category, imgUrl, title, link, github }: IProject) => {
         <div className=' w-full flex items-center justify-between mt-4 gap-4'>
           <ProjectLink link={link} title={title} />
 
-          <a
-            href={github}
-            target='_blank'
-            rel='noopener'
-            aria-label={'thutadev projects' + title}
-            className={`w-10 ${!github && 'cursor-not-allowed'}`}
-          >
-            <GithubIcon className={`${github ? 'hover:opacity-80' : 'opacity-50'}`} />
-          </a>
+          {github ? (
+            <a href={github} target='_blank' rel='noopener' aria-label={'thutadev projects ' + title} className='w-10'>
+              <GithubIcon className='hover:opacity-80' />
+            </a>
+          ) : (
+            <a
+              href={github}
+              target='_blank'
+              rel='noopener'
+              aria-label={'thutadev projects ' + title}
+              className={`w-10 ${!github && 'cursor-not-allowed'}`}
+            >
+              <GithubIcon className={`${github ? 'hover:opacity-80' : 'opacity-50'}`} />
+            </a>
+          )}
         </div>
       </div>
     </article>
