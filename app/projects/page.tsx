@@ -178,15 +178,9 @@ const Project = ({ category, imgUrl, title, link, github }: IProject) => {
               <GithubIcon className='hover:opacity-80' />
             </a>
           ) : (
-            <a
-              href={github}
-              target='_blank'
-              rel='noopener'
-              aria-label={'thutadev projects ' + title}
-              className={`w-10 ${!github && 'cursor-not-allowed'}`}
-            >
+            <span className='w-10 cursor-not-allowed'>
               <GithubIcon className={`${github ? 'hover:opacity-80' : 'opacity-50'}`} />
-            </a>
+            </span>
           )}
         </div>
       </div>
