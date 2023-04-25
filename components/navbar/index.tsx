@@ -84,6 +84,7 @@ export const NavBar = () => {
         </motion.a>
 
         <button
+          aria-label='dark light theme switcher'
           onClick={() => {
             setMode(mode === 'light' ? 'dark' : 'light')
           }}

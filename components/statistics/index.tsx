@@ -52,10 +52,10 @@ const Statistics = () => {
     <div className='col-span-2 flex flex-col items-end justify-between'>
       {statistics.map((stat, idx) => (
         <div key={idx} className='flex flex-col items-end justify-center'>
-          <span className='inline-block text-7xl font-[900]'>
+          <span className='inline-block text-7xl dark:text-light font-[900]'>
             <AnimatedNumbers value={stat.count} />+
           </span>
-          <h2 className='text-xl font-[600] capitalize'>{stat.title}</h2>
+          <h2 className='text-xl text-dark/75 dark:text-light font-[600] capitalize'>{stat.title}</h2>
         </div>
       ))}
     </div>

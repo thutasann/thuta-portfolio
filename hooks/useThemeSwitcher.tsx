@@ -31,6 +31,8 @@ const UseThemeSwitcher = (): [string, React.Dispatch<string>] => {
       }
     }
 
+    handleChange()
+
     mediaQuery.addEventListener('change', handleChange)
 
     return () => mediaQuery.removeEventListener('change', handleChange)
