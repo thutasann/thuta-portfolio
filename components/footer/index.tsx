@@ -4,16 +4,20 @@ import Layout from '../layout'
 
 const Footer = () => {
   return (
-    <footer className='w-full border-t border-solid border-dark font-medium text-lg'>
+    <footer className='w-full border-t  border-dark font-medium text-lg dark:text-light dark:border-light'>
       <Layout className='py-8 flex items-center justify-between'>
         <span>{new Date().getFullYear()} &copy; All Rights Reserved.</span>
         <div className='flex items-center'>
-          Build with <span className='text-primary text-2xl px-1'>&#9825;</span>by&nbsp;
-          <Link href='/' className='underline underline-offset-2 '>
+          Build with <span className='text-primaryDark dark:text-primary text-2xl px-1'>&#9825;</span>by&nbsp;
+          <Link href='/' className='underline underline-offset-2 dark:hover:text-light/75 hover:text-dark/75 '>
             Thuta Sann
           </Link>
         </div>
-        <Link href='mailto:thutasann2002@gmail.com' aria-label='Say Hello' className='underline underline-offset-2'>
+        <Link
+          href='mailto:thutasann2002@gmail.com'
+          aria-label='Say Hello'
+          className='underline underline-offset-2 dark:hover:text-light/75 hover:text-dark/75'
+        >
           Say Hello
         </Link>
       </Layout>

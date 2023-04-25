@@ -14,12 +14,12 @@ const CustomLinks = ({ href, title, className = '' }: ICustomLink) => {
   const path = usePathname()
 
   return (
-    <Link href={href} className={`${className} relative group uppercase text-[15px] font-[600] text-dark/90`}>
+    <Link href={href} className={`${className} relative group uppercase text-[15px] font-[600] text-dark/90 dark:text-light`}>
       {title}
       <span
         className={`h-[1px] inline-block bg-dark absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 ${
           path === href ? 'w-full' : 'w-0'
-        }`}
+        } dark:bg-light`}
       >
         &nbsp;
       </span>
@@ -31,7 +31,7 @@ export const NavBar = () => {
   const [mode, setMode] = UseThemeSwitcher()
 
   return (
-    <header className='sticky z-[1000] top-0 w-full px-32 py-7 font-medium flex items-center justify-between nav backdrop-blur-[9px]'>
+    <header className='sticky z-[1000] top-0 w-full px-32 py-7 font-medium flex items-center justify-between  backdrop-blur-[9px] dark:text-light'>
       <nav>
         {navbarLinks.map((link, idx) => (
           <CustomLinks href={link.link} title={link.text} className='mx-4' key={idx} />
@@ -87,7 +87,9 @@ export const NavBar = () => {
           onClick={() => {
             setMode(mode === 'light' ? 'dark' : 'light')
           }}
-          className='ml-8  flex items-center justify-center rounded-full p-1'
+          className={`cursor-pointer ml-8 flex items-center justify-center rounded-full p-1 ${
+            mode === 'light' ? 'bg-dark text-light' : 'bg-light text-dark'
+          }`}
         >
           {mode === 'dark' ? <SunIcon className='fill-dark' /> : <MoonIcon className='fill-dark' />}
         </button>

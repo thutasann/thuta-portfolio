@@ -7,15 +7,19 @@ html {
 }
 
 *::selection {
-  @apply bg-dark text-white;
+  @apply bg-dark text-white dark:bg-light dark:text-dark;
+}
+
+img::selection {
+  @apply bg-transparent;
 }
 
 .btnResume {
-  @apply flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-bold hover:bg-light hover:text-dark cursor-pointer border border-solid border-transparent hover:border-dark transition-all duration-300 ease-in-out;
+  @apply flex items-center bg-dark dark:bg-light dark:text-dark text-light dark:hover:bg-dark dark:hover:text-light dark:hover:border-light p-2.5 px-6 rounded-lg text-lg font-bold hover:bg-light hover:text-dark cursor-pointer border border-solid border-transparent hover:border-dark transition-all duration-300 ease-in-out;
 }
 
 .btnContact {
-  @apply text-lg font-semibold capitalize text-dark underline hover:text-dark/75 duration-300 transition-all ease-out;
+  @apply text-lg font-semibold capitalize text-dark dark:text-light dark:hover:text-light/75 underline hover:text-dark/75 duration-300 transition-all ease-out;
 }
 
 .section-title {

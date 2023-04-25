@@ -43,8 +43,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang='en'>
       <Analytics />
-      <body>
-        <main className={`${poppin.className} font-poppins bg-light w-full min-h-screen`}>
+      <body className='bg-light dark:bg-dark'>
+        <main className={`${poppin.className} font-poppins bg-light dark:bg-transparent w-full min-h-screen`}>
           <NavBar />
           {children}
           <Footer />
