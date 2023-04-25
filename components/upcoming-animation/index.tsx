@@ -14,7 +14,7 @@ const options: Options = {
 }
 
 const UpcomingAnimation = () => {
-  return <Lottie options={options} width={500} ariaLabel='Article Upcoming' title='Articles Upcoming' ariaRole='animation' />
+  return <Lottie options={options} width={500} ariaLabel='Article Upcoming' title='Articles Upcoming' />
 }
 
 export default UpcomingAnimation

@@ -5,9 +5,10 @@ import { navbarLinks } from '@/constants/navbar'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React from 'react'
-import { GithubIcon, LinkedInIcon, TwitterIcon } from '../icons'
+import { GithubIcon, LinkedInIcon, MoonIcon, SunIcon, TwitterIcon } from '../icons'
 import Logo from '../logo'
 import { motion } from 'framer-motion'
+import UseThemeSwitcher from '@/hooks/useThemeSwitcher'
 
 const CustomLinks = ({ href, title, className = '' }: ICustomLink) => {
   const path = usePathname()
@@ -27,6 +28,8 @@ const CustomLinks = ({ href, title, className = '' }: ICustomLink) => {
 }
 
 export const NavBar = () => {
+  const [mode, setMode] = UseThemeSwitcher()
+
   return (
     <header className='sticky z-[1000] top-0 w-full px-32 py-7 font-medium flex items-center justify-between nav backdrop-blur-[9px]'>
       <nav>
@@ -34,7 +37,7 @@ export const NavBar = () => {
           <CustomLinks href={link.link} title={link.text} className='mx-4' key={idx} />
         ))}
       </nav>
-      <nav className='flex items-center justify-center flex-wrap'>
+      <nav className='flex items-center justify-center flex-wrap gap-[10px]'>
         <motion.a
           whileHover={{
             y: -2,
@@ -79,6 +82,15 @@ export const NavBar = () => {
         >
           <TwitterIcon className='w-6 ml-3' />
         </motion.a>
+
+        <button
+          onClick={() => {
+            setMode(mode === 'light' ? 'dark' : 'light')
+          }}
+          className='ml-8  flex items-center justify-center rounded-full p-1'
+        >
+          {mode === 'dark' ? <SunIcon className='fill-dark' /> : <MoonIcon className='fill-dark' />}
+        </button>
       </nav>
       <div className='absolute left-[50%] top-2 translate-x-[-50%]'>
         <Logo />
