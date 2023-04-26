@@ -14,13 +14,13 @@ const Education = (): JSX.Element => {
 
   return (
     <>
-      <h2 className='section-title'>Education</h2>
+      <h2 className='section-title dark:text-light'>Education</h2>
       <div ref={ref} className='w-[75%] mx-auto mt-16 relative'>
         <motion.div
           style={{
             scaleY: scrollYProgress,
           }}
-          className='absolute left-9 top-0 w-[4px] h-[100vh] bg-dark origin-top'
+          className='absolute left-9 top-0 w-[4px] h-[100vh] bg-dark dark:bg-light origin-top'
         />
         <ul className='w-full flex flex-col items-start justify-between ml-4'>
           {educations.map(({ type, time, place, info, link }, idx) => (
@@ -50,7 +50,7 @@ const EducationCard: React.FC<IEducation> = ({ type, time, place, info, link }):
           type: 'spring',
         }}
       >
-        <h3 className='capitalize font-[700] text-2xl'>
+        <h3 className='capitalize font-[700] text-2xl dark:text-light'>
           {type}&nbsp;
           <a
             href={link}
@@ -62,10 +62,10 @@ const EducationCard: React.FC<IEducation> = ({ type, time, place, info, link }):
             @{place}
           </a>
         </h3>
-        <span className='capitalize font-medium text-dark/75'>
+        <span className='capitalize font-medium text-dark/75 dark:text-light/75'>
           {time} | {place}
         </span>
-        <p className='w-full font-medium'>{info}</p>
+        <p className='w-full font-medium dark:text-light'>{info}</p>
       </motion.div>
     </li>
   )

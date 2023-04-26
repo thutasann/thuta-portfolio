@@ -14,13 +14,13 @@ const Experience = (): JSX.Element => {
 
   return (
     <>
-      <h2 className='section-title'>Experience</h2>
+      <h2 className='section-title dark:text-light'>Experience</h2>
       <div ref={ref} className='w-[75%] mx-auto mt-16 relative'>
         <motion.div
           style={{
             scaleY: scrollYProgress,
           }}
-          className='absolute left-9 top-0 w-[4px] h-full bg-dark origin-top'
+          className='absolute left-9 top-0 w-[4px] h-full bg-dark dark:bg-light origin-top'
         />
         <ul className='w-full flex flex-col items-start justify-between ml-4'>
           {experiences.map((exp, idx) => (
@@ -58,7 +58,7 @@ const ExperienceCard: React.FC<IExperience> = ({ position, company, companyLink,
           type: 'spring',
         }}
       >
-        <h3 className='capitalize font-[700] text-2xl'>
+        <h3 className='capitalize font-[700] text-2xl dark:text-light'>
           {position}&nbsp;
           <a
             href={companyLink}
@@ -70,10 +70,10 @@ const ExperienceCard: React.FC<IExperience> = ({ position, company, companyLink,
             @{company}
           </a>
         </h3>
-        <span className='capitalize font-medium text-dark/75'>
+        <span className='capitalize font-medium text-dark/75 dark:text-light/75'>
           {time} | {address}
         </span>
-        <p className='w-full font-medium'>{work}</p>
+        <p className='w-full font-medium dark:text-light'>{work}</p>
       </motion.div>
     </li>
   )
