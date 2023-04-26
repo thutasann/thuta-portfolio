@@ -6,6 +6,10 @@ html {
   scroll-behavior: smooth;
 }
 
+html body {
+  overflow-x: hidden;
+}
+
 *::selection {
   @apply bg-dark text-white dark:bg-light dark:text-dark;
 }
@@ -23,7 +27,7 @@ img::selection {
 }
 
 .section-title {
-  @apply font-[900] text-8xl mt-40 w-full text-center;
+  @apply font-[900] text-8xl mt-40 w-full text-center mb-16 lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8 dark:text-light;
 }
 
 .nav {

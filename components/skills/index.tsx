@@ -1,47 +1,31 @@
 'use client'
 
+import { techStacks } from '@/constants/data'
 import React from 'react'
-import { motion } from 'framer-motion'
-import { SkillsData } from '@/constants/data'
+import Marquee from 'react-fast-marquee'
+import BlurImage from '../blur-image'
 
 const Skills = (): JSX.Element => {
   return (
     <>
-      <h2
-        className='
-      section-title dark:text-light'
-      >
-        Skills
-      </h2>
-      <div className='mt-3 w-[90%]  mx-auto h-screen relative flex items-center justify-center rounded-full bg-circularLight dark:bg-circularDark'>
-        {SkillsData.map(({ name, x, y, isWeb }, idx) => (
-          <Skill key={idx} name={name} x={x} y={y} isWeb={isWeb} />
-        ))}
+      <h2 className='section-title'>Tech Stacks</h2>
+      <div className='mt-16'>
+        <Marquee speed={60}>
+          <div className='flex items-center gap-[80px] mr-[80px] w-auto'>
+            {techStacks.map((tech, idx) => (
+              <BlurImage
+                key={idx}
+                src={'/skills/' + tech.src}
+                width={90}
+                height={90}
+                alt='thutadev techstacks'
+                className='rounded-full hover:scale-110 cursor-pointer transition-all duration-300 ease-in-out'
+              />
+            ))}
+          </div>
+        </Marquee>
       </div>
     </>
-  )
-}
-
-const Skill = ({ name, x, y, isWeb }: ISkill): JSX.Element => {
-  return (
-    <motion.div
-      whileHover={{
-        scale: 1.05,
-      }}
-      initial={{
-        x: 0,
-        y: 0,
-      }}
-      whileInView={{ x: x, y: y, transition: { duration: 1.5 } }}
-      viewport={{
-        once: true,
-      }}
-      className={`flex items-center justify-center rounded-full font-semibold bg-dark dark:bg-light dark:text-dark text-light py-3 px-6 shadow-dark dark:shadow-light text-lg cursor-pointer hover:shadow-none  hover:bg-dark/95 dark:hover:bg-light/95 ${
-        !isWeb ? 'absolute' : ''
-      }`}
-    >
-      {name}
-    </motion.div>
   )
 }
 

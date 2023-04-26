@@ -49,13 +49,15 @@ const AnimatedNumbers = ({ value }: { value: number }) => {
 
 const Statistics = () => {
   return (
-    <div className='col-span-2 flex flex-col items-end justify-between'>
+    <div className='col-span-2 flex flex-col items-end justify-between xl:col-span-8 xl:flex-row xl:items-center md:order-3'>
       {statistics.map((stat, idx) => (
-        <div key={idx} className='flex flex-col items-end justify-center'>
-          <span className='inline-block text-7xl dark:text-light font-[900]'>
+        <div key={idx} className='flex flex-col items-end justify-center xl:items-center '>
+          <span className='inline-block text-7xl dark:text-light font-[900] md:text-6xl sm:text-5xl xs:text-4xl'>
             <AnimatedNumbers value={stat.count} />+
           </span>
-          <h2 className='text-xl text-dark/75 dark:text-light font-[600] capitalize'>{stat.title}</h2>
+          <h2 className='text-xl text-dark/75 dark:text-light font-[600] capitalize xl:text-center md:text-lg sm:text-base xs:text-sm'>
+            {stat.title}
+          </h2>
         </div>
       ))}
     </div>

@@ -277,7 +277,7 @@ export const SkillsData: ISkill[] = [
   },
   {
     name: 'MongoDB',
-    x: '15vw',
+    x: '17vw',
     y: '-10vw',
   },
 
@@ -291,6 +291,49 @@ export const SkillsData: ISkill[] = [
     name: 'Git',
     x: '0vw',
     y: '10vw',
+  },
+]
+
+export const techStacks = [
+  {
+    src: 'nextjs.webp',
+    width: 500,
+    height: 500,
+  },
+  {
+    src: 'react.png',
+    width: 288,
+    height: 288,
+  },
+  {
+    src: 'typescript.png',
+    width: 360,
+    height: 360,
+  },
+  {
+    src: 'tailwind.png',
+    width: 256,
+    height: 256,
+  },
+  {
+    src: 'firebase.png',
+    width: 288,
+    height: 288,
+  },
+  {
+    src: 'mongodb.png',
+    width: 413,
+    height: 484,
+  },
+  {
+    src: 'nodejs.png',
+    width: 2400,
+    height: 1472,
+  },
+  {
+    src: 'graphql.png',
+    width: 2048,
+    height: 2048,
   },
 ]
 
