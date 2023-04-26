@@ -2,102 +2,63 @@
 
 import userData from '@/constants/data'
 import { navbarLinks } from '@/constants/navbar'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
-import React from 'react'
+import React, { useState } from 'react'
 import { GithubIcon, LinkedInIcon, MoonIcon, SunIcon, TwitterIcon } from '../icons'
 import Logo from '../logo'
 import { motion } from 'framer-motion'
-import UseThemeSwitcher from '@/hooks/useThemeSwitcher'
-
-const CustomLinks = ({ href, title, className = '' }: ICustomLink) => {
-  const path = usePathname()
-
-  return (
-    <Link href={href} className={`${className} relative group uppercase text-[15px] font-[600] text-dark/90 dark:text-light`}>
-      {title}
-      <span
-        className={`h-[1px] inline-block bg-dark absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 ${
-          path === href ? 'w-full' : 'w-0'
-        } dark:bg-light`}
-      >
-        &nbsp;
-      </span>
-    </Link>
-  )
-}
+import Hamburger from './hamburger'
+import CustomLinks, { DesktopSocials } from './custom-links'
+import CustomMobileLinks, { MobileSocials } from './custom-mobile-links'
 
 export const NavBar = () => {
-  const [mode, setMode] = UseThemeSwitcher()
+  const [isOpen, setIsOpen] = useState<boolean>(false)
+
+  const handleClick = () => {
+    setIsOpen(!isOpen)
+  }
 
   return (
-    <header className='sticky z-[1000] top-0 w-full px-32 py-7 font-medium flex items-center justify-between  backdrop-blur-[9px] dark:text-light'>
-      <nav>
-        {navbarLinks.map((link, idx) => (
-          <CustomLinks href={link.link} title={link.text} className='mx-4' key={idx} />
-        ))}
-      </nav>
-      <nav className='flex items-center justify-center flex-wrap gap-[10px]'>
-        <motion.a
-          whileHover={{
-            y: -2,
-          }}
-          whileTap={{
-            scale: 0.9,
-          }}
-          href={userData.socialLinks.github}
-          target='_blank'
-          rel='noopener'
-          aria-label='ThutaDev GitHub'
-          className='w-6 mr-3'
-        >
-          <GithubIcon />
-        </motion.a>
-        <motion.a
-          whileHover={{
-            y: -2,
-          }}
-          whileTap={{
-            scale: 0.9,
-          }}
-          href={userData.socialLinks.linkedin}
-          target='_blank'
-          rel='noopener'
-          aria-label='ThutaDev LinkedIn'
-          className='w-6 mx-3'
-        >
-          <LinkedInIcon />
-        </motion.a>
-        <motion.a
-          whileHover={{
-            y: -2,
-          }}
-          whileTap={{
-            scale: 0.9,
-          }}
-          href={userData.socialLinks.twitter}
-          target='_blank'
-          aria-label='ThutaDev Twitter'
-          rel='noopener'
-        >
-          <TwitterIcon className='w-6 ml-3' />
-        </motion.a>
+    <>
+      {/* Desktop Navs */}
+      <header className='nav'>
+        <Hamburger onClick={handleClick} isOpen={isOpen} />
+        <div className='w-full flex justify-between items-center lg:hidden '>
+          <nav>
+            {navbarLinks.map((link, idx) => (
+              <CustomLinks href={link.link} title={link.text} className='mx-4' key={idx} />
+            ))}
+          </nav>
+          <DesktopSocials />
+        </div>
 
-        <button
-          aria-label='dark light theme switcher'
-          onClick={() => {
-            setMode(mode === 'light' ? 'dark' : 'light')
+        <div className='absolute left-[50%] top-2 translate-x-[-50%]'>
+          <Logo />
+        </div>
+      </header>
+
+      {/* Mobile Nav */}
+      {isOpen ? (
+        <motion.div
+          initial={{
+            scale: 0,
+            opacity: 0,
+            x: '-50%',
+            y: '-50%',
           }}
-          className={`cursor-pointer ml-8 flex items-center justify-center rounded-full p-1 ${
-            mode === 'light' ? 'bg-dark text-light' : 'bg-light text-dark'
-          }`}
+          animate={{
+            scale: 1,
+            opacity: 1,
+          }}
+          className='mobile-nav'
         >
-          {mode === 'dark' ? <SunIcon className='fill-dark' /> : <MoonIcon className='fill-dark' />}
-        </button>
-      </nav>
-      <div className='absolute left-[50%] top-2 translate-x-[-50%]'>
-        <Logo />
-      </div>
-    </header>
+          <nav className='flex items-center flex-col justify-center'>
+            {navbarLinks.map((link, idx) => (
+              <CustomMobileLinks href={link.link} title={link.text} className='' key={idx} toggle={handleClick} />
+            ))}
+          </nav>
+          <MobileSocials />
+        </motion.div>
+      ) : null}
+    </>
   )
 }

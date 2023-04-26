@@ -25,3 +25,11 @@ img::selection {
 .section-title {
   @apply font-[900] text-8xl mt-40 w-full text-center;
 }
+
+.nav {
+  @apply w-full top-0 z-[100] px-32 py-7 font-medium flex items-center justify-between  backdrop-blur-[9px] dark:text-light sticky;
+}
+
+.mobile-nav {
+  @apply min-w-[70vw] z-[2000] flex flex-col justify-center items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  bg-dark/90 dark:bg-light/75 rounded-lg backdrop-blur-[9px] py-32;
+}

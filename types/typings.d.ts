@@ -8,6 +8,7 @@ interface ICustomLink {
   href: string
   title: string
   className: string
+  toggle?: any
 }
 
 interface IIcons {
@@ -51,4 +52,9 @@ interface IProject {
   imgUrl: string
   github?: string
   summary?: string
+}
+
+interface IHumburger {
+  onClick: () => void
+  isOpen: boolean
 }
