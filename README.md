@@ -8,7 +8,8 @@ Live URL: <https://thutadev.vercel.app/>
 
 ## HighLights
 
-- Performance Optimized
-- Light/Dark Theme
-- Tailwindcss
-- Framer Motion
+- 🚀 NEXTJS 13 (App Dir)
+- 🚀 Performance Optimized
+- 🚀 Light/Dark Theme
+- 🚀 Tailwindcss
+- 🚀 Framer Motion
