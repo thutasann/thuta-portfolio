@@ -9,7 +9,7 @@ const Skills = (): JSX.Element => {
     <>
       <h2
         className='
-      section-title'
+      section-title dark:text-light'
       >
         Skills
       </h2>

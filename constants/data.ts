@@ -261,7 +261,7 @@ export const SkillsData: ISkill[] = [
     y: '-10vw',
   },
   {
-    name: 'TailWindCSS',
+    name: 'TailwindCSS',
     x: '20vw',
     y: '6vw',
   },
