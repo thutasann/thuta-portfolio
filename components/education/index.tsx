@@ -20,7 +20,7 @@ const Education = (): JSX.Element => {
           style={{
             scaleY: scrollYProgress,
           }}
-          className='absolute left-9 top-0 w-[4px] h-full bg-dark dark:bg-light origin-top md:w-[2px] md:left-[30px] xs:left-[20px]'
+          className='absolute left-9 top-0 w-[4px] xs:h-full h-[100vh] bg-dark dark:bg-light origin-top md:w-[2px] md:left-[30px] xs:left-[20px]'
         />
         <ul className='w-full flex flex-col items-start justify-between ml-4'>
           {educations.map(({ type, time, place, info, link }, idx) => (
@@ -36,7 +36,7 @@ const EducationCard: React.FC<IEducation> = ({ type, time, place, info, link }):
   const ref = useRef<any>(null)
 
   return (
-    <li ref={ref} className='my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-center justify-between md:w-[80%]'>
+    <li ref={ref} className='my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-start justify-between md:w-[80%]'>
       <Icon reference={ref} />
       <motion.div
         initial={{

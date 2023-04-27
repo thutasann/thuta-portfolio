@@ -11,7 +11,7 @@ const Skills = (): JSX.Element => {
       <h2 className='section-title'>Tech Stacks</h2>
       <div className='mt-16'>
         <Marquee speed={60}>
-          <div className='flex items-center gap-[80px] mr-[80px] w-auto'>
+          <div className='flex items-center xs:gap-[50px] gap-[80px] xs:mr-[50px]  mr-[80px] w-auto'>
             {techStacks.map((tech, idx) => (
               <BlurImage
                 key={idx}
