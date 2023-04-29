@@ -1,8 +1,7 @@
 import { AnimatedText } from '@/components/animated-text'
-import BlurImage from '@/components/blur-image'
-import { GithubIcon } from '@/components/icons'
 import Layout from '@/components/layout'
-import ProjectLink from '@/components/project-link'
+import FeaturedProject from '@/components/projects/featured'
+import Project from '@/components/projects/project'
 import userData, { projects } from '@/constants/data'
 import { Metadata } from 'next'
 import React from 'react'
@@ -42,7 +41,7 @@ const Projects = () => {
       <main className='w-full mb-16 flex flex-col items-center justify-center dark:text-light'>
         <Layout className='pt-16'>
           <AnimatedText text='Projects' className='mb-16 lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8' />
-          <div className='max-w-[1400px] mx-auto grid grid-cols-12 gap-24 mt-16'>
+          <div className='max-w-[1400px] mx-auto grid grid-cols-12 gap-24 mt-16 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0'>
             <div className='col-span-12'>
               <FeaturedProject
                 id={projects[0].id}
@@ -100,91 +99,6 @@ const Projects = () => {
         </Layout>
       </main>
     </>
-  )
-}
-
-const FeaturedProject = ({ summary, category, imgUrl, link, title, github }: IProject): JSX.Element => {
-  return (
-    <article className='w-full flex items-center justify-center rounded-[2rem] border border-solid border-dark bg-light shadow-2xl relative p-6 dark:bg-dark dark:border-light'>
-      <div className='absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-br-3xl  rounded-[2rem] bg-dark dark:bg-light' />
-
-      <a
-        href={link}
-        target='_blank'
-        rel='noopener'
-        aria-label={'thutadev projects' + title}
-        className='w-1/2 cursor-pointer overflow-hidden relative rounded-lg  h-[300px]'
-      >
-        <BlurImage src={imgUrl} alt={title} width={2844} height={1578} className='hover:scale-110' />
-      </a>
-
-      <div className='w-1/2 flex flex-col items-start justify-between pl-6'>
-        <span className='bg-dark dark:bg-light text-light dark:text-dark px-3 py-1 font-bold rounded-md text-lg'>{category}</span>
-        <a
-          href={link}
-          target='_blank'
-          rel='noopener'
-          aria-label={'thutadev projects' + title}
-          className='hover:underline underline-offset-2'
-        >
-          <h2 className='my-2 w-full text-left text-4xl font-[800] dark:text-light'>{title}</h2>
-        </a>
-        <p className='my-2 font-medium text-dark dark:text-light'>{summary}</p>
-
-        <div className='mt-2 flex items-center justify-center gap-4'>
-          <a href={github} target='_blank' rel='noopener' aria-label={'thutadev projects ' + title} className='w-10'>
-            <GithubIcon className='hover:opacity-80' />
-          </a>
-
-          <ProjectLink link={link} title={title} />
-        </div>
-      </div>
-    </article>
-  )
-}
-
-const Project = ({ category, imgUrl, title, link, github }: IProject) => {
-  return (
-    <article className='relative w-full flex flex-col items-center justify-center rounded-[2rem] border border-solid border-dark bg-light dark:bg-dark dark:border-light p-6'>
-      <div className='absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-br-3xl rounded-[2rem] bg-dark dark:bg-light' />
-
-      <a
-        href={link}
-        target='_blank'
-        rel='noopener'
-        aria-label={'thutadev projects' + title}
-        className='w-full cursor-pointer overflow-hidden relative rounded-lg  h-[300px]'
-      >
-        <BlurImage src={imgUrl} alt={title} width={2844} height={1578} className='hover:scale-110' />
-      </a>
-
-      <div className='w-full mt-4 flex flex-col items-start justify-between'>
-        <span className='bg-dark text-light px-3 py-1 font-bold rounded-md text-lg dark:bg-light dark:text-dark'>{category}</span>
-        <a
-          href={link}
-          target='_blank'
-          rel='noopener'
-          aria-label={'thutadev projects' + title}
-          className='hover:underline underline-offset-2'
-        >
-          <h2 className='my-2 w-full text-left text-4xl font-[800]'>{title}</h2>
-        </a>
-
-        <div className=' w-full flex items-center justify-between mt-4 gap-4'>
-          <ProjectLink link={link} title={title} />
-
-          {github ? (
-            <a href={github} target='_blank' rel='noopener' aria-label={'thutadev projects ' + title} className='w-10'>
-              <GithubIcon className='hover:opacity-80' />
-            </a>
-          ) : (
-            <span className='w-10 cursor-not-allowed'>
-              <GithubIcon className={`${github ? 'hover:opacity-80' : 'opacity-50'}`} />
-            </span>
-          )}
-        </div>
-      </div>
-    </article>
   )
 }
 
