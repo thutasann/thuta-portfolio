@@ -4,7 +4,6 @@ import HireMe from '@/components/hire-me'
 import { LinkArrow } from '@/components/icons'
 import Layout from '@/components/layout'
 import { textData } from '@/constants/texts'
-import Image from 'next/image'
 import Link from 'next/link'
 
 export default function Home() {
