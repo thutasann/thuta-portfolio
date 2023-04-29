@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "PORT=3001 next dev",
     "build": "next build",
+    "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint"
   },
@@ -19,6 +20,7 @@
     "eslint-config-next": "13.3.0",
     "framer-motion": "^10.12.4",
     "next": "13.3.0",
+    "next-sitemap": "^4.0.7",
     "postcss": "8.4.22",
     "react": "18.2.0",
     "react-dom": "18.2.0",
