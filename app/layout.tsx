@@ -45,6 +45,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang='en'>
       <Analytics />
+
       <body className='bg-light dark:bg-dark'>
         <main className={`${poppin.className} relative font-poppins bg-light dark:bg-transparent w-full min-h-screen`}>
           <NavBar />
@@ -53,11 +54,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </main>
         <Script id='theme-switcher' strategy='beforeInteractive'>
           {`
-          if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.classList.add('dark')
-          } else {
-            document.documentElement.classList.remove('dark')
-          }`}
+if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+  document.documentElement.classList.add('dark')
+} else {
+  document.documentElement.classList.remove('dark')
+}`}
         </Script>
       </body>
     </html>
