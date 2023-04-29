@@ -41,7 +41,7 @@ const Projects = () => {
     <>
       <main className='w-full mb-16 flex flex-col items-center justify-center dark:text-light'>
         <Layout className='pt-16'>
-          <AnimatedText text='Projects' />
+          <AnimatedText text='Projects' className='mb-16 lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8' />
           <div className='max-w-[1400px] mx-auto grid grid-cols-12 gap-24 mt-16'>
             <div className='col-span-12'>
               <FeaturedProject

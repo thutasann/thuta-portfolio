@@ -19,7 +19,7 @@ const Skills = (): JSX.Element => {
                 width={90}
                 height={90}
                 alt='thutadev techstacks'
-                className='rounded-full hover:scale-110 cursor-pointer transition-all duration-300 ease-in-out'
+                className='rounded-full hover:scale-110 cursor-pointer transition-all duration-300 ease-in-out object-cover object-center'
               />
             ))}
           </div>

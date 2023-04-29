@@ -12,9 +12,9 @@ const userData = {
       "I'm a developer that loves building NEXTJS, ANGULAR & SpringBoot and IOS Mobile apps. Also loves building UI/UX with TailwindCSS, Material UI, ChakraUI, etc",
     description: [
       `I've been developing websites since I was 18 years old. I started my web development career with HTML, CSS and PHP. and After PHP, I've learnt Laravel web Framework.`,
-      `After learning HTML and struggling with CSS, I came up with a brilliant idea of using Bootstrap and Tailwind so that I don't have to style everything by myself and - for obvious reasons - if you knew Tailwind, you were cool. 👽`,
-      `But now, I've been coding in React.js, React Native, Nextjs, Nestjs, MongoDB, MySQL, Tailwind, Flutter programming languages etc to name a few. Although I barely know the syntax (Psst, Stack overflow!), I consider myself a Ninja developer I'm laughing right now.
-      Now, I am currently exploring Flutter Programming Language as a Mobile Development & Spring Boot Framework as a Backend Development for Microservices meanwhile Exploring deeply to NextJs.`,
+      `After learning HTML and struggling with CSS, I came up with a brilliant idea of using Bootstrap and Tailwind so that I don't have to style everything by myself and - for obvious reasons - if you knew Tailwind, you were cool. `,
+      `But now, I've been coding in Reactjs, React Native, Nextjs, Nestjs, MongoDB, MySQL, Tailwind, Nodejs programming languages etc to name a few. Although I barely know the syntax (Psst, Stack overflow!), I consider myself a Ninja developer I'm laughing right now.
+      Now, I'm currently learning MERN Stack as Full Stack Development while Exploring deeply to NextJs.`,
     ],
     keywords: ['Thuta Sann', 'thutadev', 'Thuta Dev', 'Thutasann Developer'],
     currentProject: 'UIKit Netflix Clone',
@@ -307,6 +307,11 @@ export const techStacks = [
   },
   {
     src: 'typescript.png',
+    width: 360,
+    height: 360,
+  },
+  {
+    src: 'javascript.png',
     width: 360,
     height: 360,
   },
