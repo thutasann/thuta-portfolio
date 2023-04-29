@@ -41,7 +41,7 @@ const Projects = () => {
       <main className='w-full mb-16 flex flex-col items-center justify-center dark:text-light'>
         <Layout className='pt-16'>
           <AnimatedText text='Projects' className='mb-16 lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8' />
-          <div className='max-w-[1400px] mx-auto grid grid-cols-12 gap-24 mt-16 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0'>
+          <div className='max-w-[1400px] mx-auto grid grid-cols-12 gap-24 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0 '>
             <div className='col-span-12'>
               <FeaturedProject
                 id={projects[0].id}
@@ -53,7 +53,7 @@ const Projects = () => {
                 github={projects[0].github}
               />
             </div>
-            <div className='col-span-6'>
+            <div className='col-span-6 sm:col-span-12'>
               <Project
                 category={projects[1].category}
                 title={projects[1].title}
@@ -62,7 +62,7 @@ const Projects = () => {
                 github={projects[1].github}
               />
             </div>
-            <div className='col-span-6'>
+            <div className='col-span-6 sm:col-span-12'>
               <Project category={projects[8].category} title={projects[8].title} link={projects[8].link} imgUrl={projects[8].imgUrl} />
             </div>
 
@@ -77,7 +77,7 @@ const Projects = () => {
                 github={projects[13].github}
               />
             </div>
-            <div className='col-span-6'>
+            <div className='col-span-6 sm:col-span-12'>
               <Project
                 category={projects[3].category}
                 title={projects[3].title}
@@ -86,7 +86,7 @@ const Projects = () => {
                 github={projects[3].github}
               />
             </div>
-            <div className='col-span-6'>
+            <div className='col-span-6 sm:col-span-12'>
               <Project
                 category={projects[4].category}
                 title={projects[4].title}
