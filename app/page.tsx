@@ -1,8 +1,8 @@
 import { AnimatedText } from '@/components/animated-text'
 import BlurImage from '@/components/blur-image'
 import HireMe from '@/components/hire-me'
+import { LinkArrow } from '@/components/icons'
 import Layout from '@/components/layout'
-import Resume from '@/components/resume'
 import { textData } from '@/constants/texts'
 import Link from 'next/link'
 
@@ -21,7 +21,9 @@ export default function Home() {
             />
             <p className='my-4 text-base font-medium md:text-sm sm:text-[15px]'>{textData.bannerText.para}</p>
             <div className='flex items-center self-start mt-2 gap-4 lg:self-center'>
-              <Resume />
+              <Link href='/cv/Thuta_Sann.pdf' target='_blank' rel='noopener' download={true} className='btnResume'>
+                Resume <LinkArrow className='w-6 ml-1' />
+              </Link>
               <Link className='btnContact' href='mailto:thutasann2002@gmail.com'>
                 Contact
               </Link>
