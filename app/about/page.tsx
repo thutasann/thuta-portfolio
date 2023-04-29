@@ -52,6 +52,9 @@ const AboutPage = () => {
                   {desc}
                 </p>
               ))}
+              <Link className='learn-more !ml-0' href='/projects'>
+                See My Projects
+              </Link>
             </div>
 
             <div className='col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark dark:border-light bg-light dark:bg-dark p-8 xl:col-span-4 md:order-1 md:col-span-8'>

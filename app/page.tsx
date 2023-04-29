@@ -19,7 +19,12 @@ export default function Home() {
               text={textData.bannerText.title}
               className='!text-6xl !text-left !leading-[62px] xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-4xl'
             />
-            <p className='my-4 text-base font-medium md:text-sm sm:text-[15px]'>{textData.bannerText.para}</p>
+            <p className='my-4 text-base font-medium md:text-sm sm:text-[15px]'>
+              {textData.bannerText.para}
+              <Link href='/about' className='learn-more'>
+                Learn More
+              </Link>
+            </p>
             <div className='flex items-center self-start mt-2 gap-4 lg:self-center'>
               <Link href='/cv/Thuta_Sann.pdf' target='_blank' rel='noopener' download={true} className='btnResume'>
                 Resume <LinkArrow className='w-6 ml-1' />
