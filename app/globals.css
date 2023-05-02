@@ -37,7 +37,3 @@ img::selection {
 .mobile-nav {
   @apply min-w-[70vw] z-[2000] flex flex-col justify-center items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  bg-dark/90 dark:bg-light/75 rounded-lg backdrop-blur-[9px] py-32;
 }
-
-.learn-more {
-  @apply ml-2 font-bold text-primary hover:underline hover:underline-offset-2 dark:text-primaryDark;
-}
