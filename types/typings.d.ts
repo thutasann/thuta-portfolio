@@ -58,3 +58,9 @@ interface IHumburger {
   onClick: () => void
   isOpen: boolean
 }
+
+interface IRepos {
+  name: string
+  description: string
+  clone_url: string
+}

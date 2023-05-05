@@ -4,14 +4,24 @@ import HireMe from '@/components/hire-me'
 import { LinkArrow } from '@/components/icons'
 import Layout from '@/components/layout'
 import { textData } from '@/constants/texts'
-import Image from 'next/image'
 import Link from 'next/link'
 
-export default function Home() {
+export default async function Home() {
+  // const token = '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'
+
+  // const headers = {
+  //   Authorization: `Bearer ${token}`,
+  //   'Content-Type': 'application/json',
+  // }
+
+  // const repos: IRepos[] = await fetch('https://api.github.com/users/thutasann/repos', { headers })
+  //   .then(response => response.json())
+  //   .catch(error => console.error(error))
+
   return (
     <main className=' flex items-center text-dark w-full min-h-full dark:text-light'>
       <Layout className='pt-0 md:pt-16 sm:pt-8'>
-        <div className='flex items-center justify-between w-full lg:flex-col max-w-[1400px] mx-auto'>
+        <div className='flex items-center justify-between w-full lg:`flex-col max-w-[1400px] mx-auto'>
           <div className='w-1/2 md:w-full'>
             <BlurImage className='w-full h-auto md:inline-block md:w-full' src='/thutadev.webp' alt='thutadev' width={1920} height={1920} />
           </div>
