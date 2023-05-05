@@ -21,7 +21,7 @@ export default async function Home() {
   return (
     <main className=' flex items-center text-dark w-full min-h-full dark:text-light'>
       <Layout className='pt-0 md:pt-16 sm:pt-8'>
-        <div className='flex items-center justify-between w-full lg:`flex-col max-w-[1400px] mx-auto'>
+        <div className='flex items-center justify-between w-full lg:flex-col max-w-[1400px] mx-auto'>
           <div className='w-1/2 md:w-full'>
             <BlurImage className='w-full h-auto md:inline-block md:w-full' src='/thutadev.webp' alt='thutadev' width={1920} height={1920} />
           </div>
