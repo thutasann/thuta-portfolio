@@ -16,6 +16,7 @@ module.exports = {
         primary: '#00AEAE',
         primaryDark: '#008080',
         primaryGray: '#D3D3D3',
+        codeBlock: '#282A36',
       },
       animation: {
         'spin-slow': 'spin 8s linear infinite',
@@ -41,5 +42,5 @@ module.exports = {
       // => @media (max-width: 479px) { ... }
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/line-clamp'), require('@tailwindcss/typography')],
 }
