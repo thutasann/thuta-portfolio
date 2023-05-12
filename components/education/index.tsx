@@ -4,6 +4,7 @@ import { educations } from '@/constants/data'
 import React, { useRef } from 'react'
 import { motion, useScroll } from 'framer-motion'
 import { Icon } from '../experience/icon'
+import { IEducation } from '@/types/typings'
 
 const Education = (): JSX.Element => {
   const ref = useRef<HTMLDivElement>(null)

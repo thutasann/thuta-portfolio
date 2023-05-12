@@ -2,6 +2,7 @@ import React from 'react'
 import BlurImage from '../blur-image'
 import { GithubIcon } from '../icons'
 import ProjectLink from '../project-link'
+import { IProject } from '@/types/typings'
 
 const Project = ({ category, imgUrl, title, link, github }: IProject) => {
   return (

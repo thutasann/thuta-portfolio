@@ -4,6 +4,7 @@ import { experiences } from '@/constants/data'
 import React, { useRef } from 'react'
 import { motion, useScroll } from 'framer-motion'
 import { Icon } from './icon'
+import { IExperience } from '@/types/typings'
 
 const Experience = (): JSX.Element => {
   const ref = useRef<HTMLDivElement>(null)
