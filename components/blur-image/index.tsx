@@ -14,9 +14,10 @@ interface IBlurImage {
   width?: number
   height?: number
   fill?: boolean
+  priority?: boolean
 }
 
-function BlurImage({ src, alt, fill, className, width, height, ...props }: IBlurImage): JSX.Element {
+function BlurImage({ src, alt, fill, className, width, height, priority, ...props }: IBlurImage): JSX.Element {
   const [isLoading, setLoading] = useState(true)
 
   return (
@@ -31,6 +32,7 @@ function BlurImage({ src, alt, fill, className, width, height, ...props }: IBlur
       onLoadingComplete={() => setLoading(false)}
       alt={alt}
       fill={fill}
+      priority={priority}
     />
   )
 }

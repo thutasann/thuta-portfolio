@@ -1,3 +1,5 @@
+import { IEducation, IExperience, IProject, ISkill } from '@/types/typings'
+
 const userData = {
   githubUsername: 'thutasann',
   name: 'THUTA SANN',

@@ -1,8 +1,11 @@
+'use client'
+
 import { CodeCategory, Snippet } from '@/types/typings'
 import React from 'react'
 import Sidebar from './sidebar'
 import { AiOutlineCalendar, AiOutlineTags } from 'react-icons/ai'
 import { HiOutlineCode } from 'react-icons/hi'
+import { useRouter } from 'next/navigation'
 
 interface ISnippetList {
   snippets: Snippet[]
@@ -10,6 +13,8 @@ interface ISnippetList {
 }
 
 const SnippetList = ({ snippets, tags }: ISnippetList) => {
+  const router = useRouter()
+
   return (
     <section className='relative flex md:flex-col w-full flex-row'>
       <div className='w-[30%] md:hidden block'>
@@ -17,7 +22,7 @@ const SnippetList = ({ snippets, tags }: ISnippetList) => {
       </div>
       <div className='w-full pl-7 md:pl-0'>
         {snippets?.map((snippet, idx) => (
-          <div className='snippet' key={idx}>
+          <div className='snippet' key={idx} onClick={() => router.push(`/snippets/${snippet.slug.current}`)}>
             <h2 className='flex flex-row md:flex-col md:items-start items-center gap-2'>
               <HiOutlineCode />
               {snippet.title}
