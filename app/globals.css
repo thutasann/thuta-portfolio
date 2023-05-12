@@ -49,3 +49,13 @@ img::selection {
 .sidebar_content > ul > li > span {
   @apply transition-all duration-500 ease-in-out;
 }
+
+.snippet {
+  @apply relative flex flex-col w-full px-3 py-3 mb-5 transition-all duration-700 ease-in-out border border-dark dark:border-primary rounded-md cursor-pointer border-opacity-20 hover:border-opacity-100 hover:shadow-md hover:bg-opacity-20 hover:bg-primaryGray dark:hover:bg-primary dark:hover:bg-opacity-20;
+}
+.snippet h2 {
+  @apply font-[700] text-xl mb-4 dark:text-light text-dark;
+}
+.snippet p {
+  @apply text-[15px] text-dark dark:text-gray-400 text-opacity-70 italic;
+}

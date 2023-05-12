@@ -58,7 +58,7 @@ const Articles = async () => {
   return (
     <>
       <main className='w-full mb-16 flex flex-col items-center justify-center'>
-        <Layout className='pt-16 '>
+        <Layout className='pt-16'>
           <AnimatedText text='Snippets' className='mb-16 lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8' />
           <SnippetList snippets={snippets} tags={tags} />
         </Layout>
