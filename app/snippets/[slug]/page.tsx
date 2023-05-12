@@ -11,6 +11,9 @@ import CustomCopyToClipboard from '@/components/copy-to-clipboard'
 import Image from 'next/image'
 import { Metadata } from 'next'
 import userData from '@/constants/data'
+import CodeBlock from '@/components/code-block'
+import { PortableText } from '@portabletext/react'
+import { RichTextComponents } from '@/components/rich-text-component'
 
 interface Props {
   params: {
@@ -94,7 +97,8 @@ const SnipppetDetail = async ({ params: { slug } }: Props) => {
   return (
     <section className='w-full h-full xl:p-24 lg:p-16 md:p-9 p-32 pt-12'>
       <article className='pb-28 mt-7'>
-        <section className='space-y-2 text-dark dark:text-light border border-opacity-50 rounded-md border-primary'>
+        {/* Header */}
+        <section className='space-y-2 text-dark dark:text-light border border-opacity-50 rounded-md border-primary mb-[50px]'>
           <div className='relative flex flex-col justify-between min-h-56 md:flex-row'>
             {/* Image */}
             <div className='absolute z-[-99] top-0 w-full h-full p-10 opacity-20 blur-sm'>
@@ -170,6 +174,12 @@ const SnipppetDetail = async ({ params: { slug } }: Props) => {
             </section>
           </div>
         </section>
+
+        <div className='text-dark dark:text-light'>
+          <PortableText value={snippet.body} components={RichTextComponents} />
+        </div>
+
+        <CodeBlock snippet={snippet} />
       </article>
     </section>
   )
