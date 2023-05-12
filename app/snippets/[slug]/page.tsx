@@ -157,7 +157,7 @@ const SnipppetDetail = async ({ params: { slug } }: Props) => {
               {/* Social */}
               <div className='mt-4'>
                 <hr className='mb-4 border-primaryGray border-opacity-50' />
-                <h3 className='text-dark/80 dark:text-light'>Share This Blog To :</h3>
+                <h3 className='text-dark/80 dark:text-light'>Share This Snippet To :</h3>
                 <div className='flex items-center mt-2 space-x-3 text-dark dark:text-light'>
                   <a className='icons group' href={facebookShareLink} target='_blank' rel='noopener' aria-label='Facebook Share'>
                     <AiFillFacebook className='group-hover:text-light' />

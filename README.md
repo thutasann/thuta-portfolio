@@ -14,3 +14,4 @@ Live URL: <https://thutadev.vercel.app/>
 - 🚀 Light/Dark Theme
 - 🚀 Tailwindcss
 - 🚀 Framer Motion
+- 🚀 Recoil

@@ -1,30 +1,41 @@
+'use client'
+
 import { CodeCategory } from '@/types/typings'
+import { useRecoilState } from 'recoil'
 import React from 'react'
 import { AiOutlineTags } from 'react-icons/ai'
-import { BiChevronsRight } from 'react-icons/bi'
 import { HiMenuAlt1 } from 'react-icons/hi'
+import { tagState } from '@/atoms/states'
+import { MagnifyingGlassIcon } from '@heroicons/react/24/solid'
 
 interface ISidebar {
   tags: CodeCategory[]
 }
 
 const Sidebar = ({ tags }: ISidebar) => {
+  const [tag, setTag] = useRecoilState(tagState)
+
+  const handleSelect = (tag: string) => {
+    setTag(tag)
+  }
+
   return (
     <div className='sidebar'>
       <h2 className='font-[700] text-2xl flex items-center text-dark dark:text-light'>
         <AiOutlineTags className='w-6 h-6 mr-3 -ml-2' />
         Tags
       </h2>
-      <div className='w-full mt-7 sidebar_content'>
+
+      <div className='w-full mt-4 sidebar_content'>
         <ul>
-          <li className='group'>
+          <li className='group' onClick={() => handleSelect('all')}>
             <HiMenuAlt1 className={`w-6 h-6 -ml-2 mr-2 fill-primaryDark`} />
-            <span className='group-hover:ml-2'>All</span>
+            <span className={`${tag === 'all' && 'text-primary'}`}>All</span>
           </li>
           {tags.map((item, idx) => (
-            <li key={idx} className='group'>
+            <li key={idx} className='group' onClick={() => handleSelect(item.title)}>
               <HiMenuAlt1 className={`w-6 h-6 -ml-2 mr-2 fill-primaryDark`} />
-              <span className='group-hover:ml-2'> {item.title}</span>
+              <span className={` ${tag === item.title && 'text-primary'}`}> {item.title}</span>
             </li>
           ))}
         </ul>
