@@ -3,6 +3,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { quote, quoteSingleWord } from '@/animations'
+import { IAnimatedtext } from '@/types/typings'
 
 export const AnimatedText: React.FC<IAnimatedtext> = ({ text, className }): JSX.Element => {
   return (

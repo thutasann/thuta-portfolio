@@ -5,6 +5,7 @@ import { GithubIcon, LinkedInIcon, MoonIcon, SunIcon, TwitterIcon } from '../ico
 import { motion } from 'framer-motion'
 import userData from '@/constants/data'
 import UseThemeSwitcher from '@/hooks/useThemeSwitcher'
+import { ICustomLink } from '@/types/typings'
 
 const CustomLinks = ({ href, title, className = '' }: ICustomLink) => {
   const path = usePathname()
