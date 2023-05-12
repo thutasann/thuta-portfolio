@@ -12,7 +12,7 @@ export const navbarLinks: ILinks[] = [
     text: 'Projects',
   },
   {
-    link: '/articles',
-    text: 'Articles',
+    link: '/snippets',
+    text: 'Snippets',
   },
 ]

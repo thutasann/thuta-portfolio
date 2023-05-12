@@ -37,7 +37,7 @@ const Articles = () => {
     <>
       <main className='w-full mb-16 flex flex-col items-center justify-center'>
         <Layout className='pt-16 '>
-          <AnimatedText text='Articles' className='mb-16 lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8' />
+          <AnimatedText text='Snippets' className='mb-16 lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8' />
           <div className='flex items-center justify-center'>
             <UpcomingAnimation />
           </div>

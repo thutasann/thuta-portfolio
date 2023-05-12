@@ -9,6 +9,7 @@ Live URL: <https://thutadev.vercel.app/>
 ## HighLights
 
 - 🚀 NEXTJS 13 (App Dir)
+- 🚀 Sanity CMS
 - 🚀 Performance Optimized
 - 🚀 Light/Dark Theme
 - 🚀 Tailwindcss
