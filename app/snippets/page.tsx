@@ -1,12 +1,13 @@
 import { AnimatedText } from '@/components/animated-text'
 import Layout from '@/components/layout'
-import UpcomingAnimation from '@/components/upcoming-animation'
 import userData from '@/constants/data'
 import { Metadata } from 'next'
 import React from 'react'
+import { groq } from 'next-sanity'
+import { client } from '@/utils/sanity.client'
 
 export const metadata: Metadata = {
-  title: 'Articles | Thuta Sann',
+  title: 'Snippets | Thuta Sann',
   description: userData.about.title,
   keywords: userData.about.keywords,
   openGraph: {
@@ -31,16 +32,36 @@ export const metadata: Metadata = {
     icon: '/thutadev.jpeg',
   },
 }
+const query = groq`
+    *[_type=='snippet']
+    {
+        ...,
+        author->,
+        tags[]->
+    } | order(_createdAt desc)
+`
 
-const Articles = () => {
+const tagsQuery = groq`
+    *[_type=='codecategory']
+    {
+        ...,
+    } | order(_createdAt desc)
+`
+
+export const revalidate = 30
+
+const Articles = async () => {
+  const snippets = await client.fetch(query)
+  const tags = await client.fetch(tagsQuery)
+  console.log('snippets', snippets)
+  console.log('tags', tags)
+
   return (
     <>
       <main className='w-full mb-16 flex flex-col items-center justify-center'>
         <Layout className='pt-16 '>
           <AnimatedText text='Snippets' className='mb-16 lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8' />
-          <div className='flex items-center justify-center'>
-            <UpcomingAnimation />
-          </div>
+          <div className='flex items-center justify-center'></div>
         </Layout>
       </main>
     </>
