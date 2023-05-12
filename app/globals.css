@@ -43,7 +43,7 @@ img::selection {
 }
 
 .sidebar_content > ul > li {
-  @apply flex items-center py-6 transition-all duration-500 ease-in-out border-b border-opacity-50 cursor-pointer border-primary hover:border-opacity-100 text-dark dark:text-light font-[700];
+  @apply flex items-center py-6 transition-all duration-500 ease-in-out border-b  cursor-pointer border-primary hover:border-opacity-100 text-dark dark:text-light font-[700];
 }
 
 .sidebar_content > ul > li > span {
@@ -72,4 +72,8 @@ img::selection {
 }
 .category::selection {
   @apply text-light;
+}
+
+.inputBox {
+  @apply w-full py-3 bg-transparent border-b outline-none border-primaryGray focus:border-primary hover:border-primary placeholder:text-gray-500 placeholder:opacity-40 mb-7 text-dark dark:text-light transition-all duration-300 ease-in-out;
 }
