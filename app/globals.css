@@ -51,11 +51,25 @@ img::selection {
 }
 
 .snippet {
-  @apply relative flex flex-col w-full px-3 py-3 mb-5 transition-all duration-700 ease-in-out border border-dark dark:border-primary rounded-md cursor-pointer border-opacity-20 hover:border-opacity-100 hover:shadow-md hover:bg-opacity-20 hover:bg-primaryGray dark:hover:bg-primary dark:hover:bg-opacity-20;
+  @apply relative flex flex-col w-full px-3 py-3 mb-5 transition-all duration-700 ease-in-out border border-dark dark:border-primaryDark rounded-md cursor-pointer border-opacity-20 hover:border-opacity-100 hover:shadow-md hover:bg-opacity-20 hover:bg-primaryGray dark:hover:bg-primary dark:hover:bg-opacity-20;
 }
 .snippet h2 {
   @apply font-[700] text-xl mb-4 dark:text-light text-dark;
 }
 .snippet p {
   @apply text-[15px] text-dark dark:text-gray-400 text-opacity-70 italic;
+}
+
+.icons {
+  @apply p-3 transition-all duration-700 ease-in-out bg-transparent border rounded-full cursor-pointer border-primary hover:bg-primaryDark;
+}
+.icons svg {
+  @apply w-5 h-5;
+}
+
+.category {
+  @apply w-auto px-4 py-2 text-sm font-semibold text-center text-light rounded-full cursor-pointer bg-primary hover:bg-primaryDark md:text-xs;
+}
+.category::selection {
+  @apply text-light;
 }

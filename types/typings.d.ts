@@ -91,6 +91,7 @@ interface Snippet extends Base {
   title: string
   slug: Slug
   description: string
+  mainImage: Image
   tags: CodeCategory[]
   code: any
   body: Block[]
