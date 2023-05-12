@@ -24,7 +24,7 @@ const SnippetList = ({ snippets, tags }: ISnippetList) => {
   let filteredSnippets: Snippet[] = []
 
   if (search) {
-    filteredSnippets = snippets.filter(item => item.title.toLowerCase().match(search))
+    filteredSnippets = snippets.filter(item => item.title.toLowerCase().includes(search))
   } else {
     filteredSnippets = tag === 'all' || tag === '' ? snippets : snippets.filter(item => item.tags.find(val => val.title === tag))
   }
