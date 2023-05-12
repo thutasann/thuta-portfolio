@@ -10,6 +10,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@portabletext/react": "^3.0.0",
+    "@sanity/image-url": "^1.0.2",
     "@types/node": "18.15.11",
     "@types/react": "18.0.37",
     "@types/react-dom": "18.0.11",
@@ -19,15 +21,20 @@
     "eslint-config-next": "13.3.0",
     "framer-motion": "^10.12.4",
     "next": "^13.4.2",
+    "next-sanity": "^4.3.2",
     "postcss": "8.4.22",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-fast-marquee": "^1.5.2",
     "react-lottie": "^1.2.3",
     "tailwindcss": "3.3.1",
-    "typescript": "5.0.4"
+    "typescript": "5.0.4",
+    "@sanity/vision": "^3.10.1",
+    "sanity": "^3.10.1",
+    "styled-components": "^5.3.9"
   },
   "devDependencies": {
-    "@types/react-lottie": "^1.2.6"
+    "@types/react-lottie": "^1.2.6",
+    "@sanity/eslint-config-studio": "^2.0.1"
   }
 }
