@@ -1,3 +1,4 @@
+import { IHumburger } from '@/types/typings'
 import React from 'react'
 
 const Hamburger = ({ onClick, isOpen }: IHumburger) => {

@@ -1,3 +1,5 @@
+import { ILinks } from '@/types/typings'
+
 export const navbarLinks: ILinks[] = [
   {
     link: '/',

@@ -29,12 +29,12 @@ const Sidebar = ({ tags }: ISidebar) => {
       <div className='w-full mt-4 sidebar_content'>
         <ul>
           <li className='group' onClick={() => handleSelect('all')}>
-            <HiMenuAlt1 className={`w-6 h-6 -ml-2 mr-2 fill-primaryDark`} />
+            <HiMenuAlt1 className={`w-6 h-6 -ml-2 mr-2 ${tag === 'all' ? 'fill-primary' : 'fill-dark dark:fill-light'}`} />
             <span className={`${tag === 'all' && 'text-primary'}`}>All</span>
           </li>
           {tags.map((item, idx) => (
             <li key={idx} className='group' onClick={() => handleSelect(item.title)}>
-              <HiMenuAlt1 className={`w-6 h-6 -ml-2 mr-2 fill-primaryDark`} />
+              <HiMenuAlt1 className={`w-6 h-6 -ml-2 mr-2 ${tag === item.title ? 'fill-primary' : 'fill-dark dark:fill-light'}`} />
               <span className={` ${tag === item.title && 'text-primary'}`}> {item.title}</span>
             </li>
           ))}
