@@ -6,13 +6,20 @@ import Layout from '@/components/layout'
 import Repos from '@/components/repos'
 import { textData } from '@/constants/texts'
 import { BsArrowUpRightSquare } from 'react-icons/bs'
-import { getLastestRepos } from '@/utils/getLastestRepos'
 import Link from 'next/link'
 import userData from '@/constants/data'
 import { IRepos } from '@/types/typings'
 
 export default async function Home() {
-  const repos: IRepos[] = await getLastestRepos()
+  const token = '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'
+  const headers = {
+    Authorization: `Bearer ${token}`,
+    'Content-Type': 'application/json',
+  }
+  const repos: IRepos[] = await fetch('https://api.github.com/users/thutasann/repos?sort=author-date-asc', { headers })
+    .then(response => response.json())
+    .catch(error => console.error(error))
+  const latestRepos = repos?.slice(0, 6)
 
   return (
     <main className=' flex items-center text-dark w-full min-h-full dark:text-light'>
@@ -64,7 +71,7 @@ export default async function Home() {
               .
             </p>
           </div>
-          <Repos repos={repos} />
+          <Repos repos={latestRepos} />
         </div>
       </Layout>
       <HireMe />
