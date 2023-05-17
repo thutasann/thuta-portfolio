@@ -11,6 +11,8 @@ import userData from '@/constants/data'
 import { IRepos } from '@/types/typings'
 import { getLastestRepos } from '@/utils/getLatestRepos'
 
+export const revalidate = 30
+
 export default async function Home() {
   const repos: IRepos[] = await getLastestRepos()
 

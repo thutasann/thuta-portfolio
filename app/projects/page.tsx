@@ -6,8 +6,6 @@ import userData, { projects } from '@/constants/data'
 import { Metadata } from 'next'
 import React from 'react'
 
-export const revalidate = 30
-
 export const metadata: Metadata = {
   title: 'Projects | Thuta Sann',
   description: userData.about.title,

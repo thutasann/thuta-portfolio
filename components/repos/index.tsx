@@ -25,7 +25,7 @@ const Repos = ({ repos }: ReposProps) => {
           </div>
           <div>
             <h2 className='text-xl md:text-md text-dark dark:text-light font-[800]'>{repo.name}</h2>
-            <p className='text-base md:text-sm text-dark/60 dark:text-light/60  font-[500]'>{repo.description}</p>
+            <p className='text-[15px] md:text-sm text-dark/60 dark:text-light/60 mt-1 font-[500]'>{repo.description}</p>
           </div>
         </a>
       ))}

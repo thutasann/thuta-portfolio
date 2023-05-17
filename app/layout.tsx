@@ -9,6 +9,7 @@ import { Analytics } from '@vercel/analytics/react'
 import Script from 'next/script'
 import RecoilWrapper from '@/components/recoil-wrapper'
 import PageProgress from '@/components/progress-bar'
+import ScrollToTop from '@/components/progress-bar/scroll-to-top'
 
 export const metadata: Metadata = {
   title: userData.about.metaTitle,
@@ -50,6 +51,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <RecoilWrapper>
         <body className='bg-light dark:bg-dark relative'>
           <PageProgress />
+          {/* @ts-ignore */}
+          <ScrollToTop />
           <main className={`${poppin.className} relative font-poppins bg-light dark:bg-transparent w-full min-h-screen`}>
             <NavBar />
             {children}
