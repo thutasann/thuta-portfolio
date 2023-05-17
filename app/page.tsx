@@ -25,10 +25,10 @@ export default async function Home() {
           <div className='w-1/2 md:w-full'>
             <BlurImage className='w-full h-auto md:inline-block md:w-full' src='/thutadev.webp' alt='thutadev' width={1920} height={1920} />
           </div>
-          <div className='w-1/2 flex flex-col items-center self-center lg:w-full lg:text-center'>
+          <div className='w-1/2 flex flex-col  items-center self-center lg:w-full lg:text-center'>
             <AnimatedText
               text={textData.bannerText.title}
-              className='!text-6xl !text-left !leading-[62px] xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-4xl'
+              className='!text-6xl !text-left !leading-[62px] xl:!text-5xl lg:!text-center lg:!text-5xl md:!text-5xl sm:!text-3xl'
             />
             <p className='my-4 text-base font-medium md:text-sm sm:text-[15px]'>{textData.bannerText.para}</p>
             <div className='flex items-center self-start mt-2 gap-4 lg:self-center'>
