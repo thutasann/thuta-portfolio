@@ -2,7 +2,7 @@ import { IRepos } from '@/types/typings'
 import axios from 'axios'
 
 export async function getLastestRepos() {
-  const token = process.env.GItHUB_TOKEN
+  const token = process.env.GITHUB_TOKEN
 
   //   const headers = {
   //     Authorization: `Bearer ${token}`,
