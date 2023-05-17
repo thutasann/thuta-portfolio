@@ -5,6 +5,7 @@ import { motion } from 'framer-motion'
 import userData from '@/constants/data'
 import UseThemeSwitcher from '@/hooks/useThemeSwitcher'
 import { ICustomLink } from '@/types/typings'
+import Link from 'next/link'
 
 const CustomMobileLinks = ({ href, title, className = '', toggle }: ICustomLink) => {
   const path = usePathname()
@@ -12,11 +13,12 @@ const CustomMobileLinks = ({ href, title, className = '', toggle }: ICustomLink)
 
   const handleClick = () => {
     toggle()
-    router.push(href)
   }
 
   return (
-    <button
+    <Link
+      href={href}
+      prefetch
       onClick={handleClick}
       className={`${className} relative group uppercase text-[15px] font-[600] text-light/90 dark:text-dark my-2`}
     >
@@ -28,7 +30,7 @@ const CustomMobileLinks = ({ href, title, className = '', toggle }: ICustomLink)
       >
         &nbsp;
       </span>
-    </button>
+    </Link>
   )
 }
 
