@@ -1,5 +1,3 @@
-'use server'
-
 import { IRepos } from '@/types/typings'
 
 export async function getLastestRepos() {
