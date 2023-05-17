@@ -2,8 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  scroll-behavior: smooth;
+html,
+html body {
+  scroll-behavior: smooth !important;
 }
 
 html body {
@@ -47,7 +48,7 @@ img::selection {
 }
 
 .sidebar_content > ul > li {
-  @apply flex items-center py-6 transition-all duration-500 ease-in-out border-b border-opacity-70  cursor-pointer border-primary hover:border-opacity-100 text-dark dark:text-light font-[700];
+  @apply flex items-center py-6  border-b border-opacity-70  cursor-pointer border-primary hover:border-opacity-100 text-dark dark:text-light font-[700];
 }
 
 .sidebar_content > ul > li > span {

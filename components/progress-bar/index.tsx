@@ -53,7 +53,11 @@ export default function ProgressBar() {
 
     const handleMutation: MutationCallback = () => {
       const anchorElements = document.querySelectorAll('a')
-      anchorElements.forEach(anchor => anchor.addEventListener('click', handleAnchorClick))
+      const filteredATags = Array.from(anchorElements).filter(function (aTag) {
+        return aTag.getAttribute('target') !== '_blank'
+      })
+
+      filteredATags.forEach(anchor => anchor.addEventListener('click', handleAnchorClick))
     }
 
     const mutationObserver = new MutationObserver(handleMutation)

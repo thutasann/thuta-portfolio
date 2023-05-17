@@ -6,10 +6,12 @@ import Sidebar from './sidebar'
 import { useRecoilValue } from 'recoil'
 import { AiOutlineCalendar, AiOutlineTags } from 'react-icons/ai'
 import { HiOutlineCode } from 'react-icons/hi'
-import { useRouter } from 'next/navigation'
 import { tagState } from '@/atoms/states'
 import { MagnifyingGlassIcon } from '@heroicons/react/24/solid'
 import NoResult from '../no-result'
+import Link from 'next/link'
+import { motion } from 'framer-motion'
+import { fadeVariants } from '@/animations'
 
 interface ISnippetList {
   snippets: Snippet[]
@@ -17,7 +19,6 @@ interface ISnippetList {
 }
 
 const SnippetList = ({ snippets, tags }: ISnippetList) => {
-  const router = useRouter()
   const [search, setSearch] = useState<string>('')
 
   const tag = useRecoilValue(tagState)
@@ -50,33 +51,46 @@ const SnippetList = ({ snippets, tags }: ISnippetList) => {
         </div>
         {filteredSnippets?.length > 0 &&
           filteredSnippets?.map((snippet, idx) => (
-            <div className='snippet' key={idx} onClick={() => router.push(`/snippets/${snippet.slug.current}`)}>
-              <h2 className='flex flex-row md:flex-col md:items-start items-center gap-2'>
-                <HiOutlineCode />
-                {snippet.title}
-              </h2>
-              <p>{snippet.description}</p>
+            <motion.div
+              className='flex flex-col cursor-pointer group'
+              initial='initialState'
+              animate='animateState'
+              exit='exitState'
+              transition={{
+                duration: 0.75,
+                ease: 'easeOut',
+              }}
+              variants={fadeVariants}
+              key={idx}
+            >
+              <Link href={`/snippets/${snippet.slug.current}`} className='snippet relative'>
+                <h2 className='flex flex-row md:flex-col md:items-start items-center gap-2'>
+                  <HiOutlineCode />
+                  {snippet.title}
+                </h2>
+                <p>{snippet.description}</p>
 
-              <div className='flex items-center mt-4 space-x-4'>
-                <span className='flex items-center text-[15px] xs:text-[12px] text-primary-black dark:text-gray-400 text-opacity-80'>
-                  <AiOutlineCalendar className='mr-1' />
-                  {new Date(snippet._createdAt).toLocaleDateString('en-US', {
-                    day: 'numeric',
-                    month: 'long',
-                    year: 'numeric',
-                  })}
-                </span>
+                <div className='flex items-center mt-4 space-x-4'>
+                  <span className='flex items-center text-[15px] xs:text-[12px] text-primary-black dark:text-gray-400 text-opacity-80'>
+                    <AiOutlineCalendar className='mr-1' />
+                    {new Date(snippet._createdAt).toLocaleDateString('en-US', {
+                      day: 'numeric',
+                      month: 'long',
+                      year: 'numeric',
+                    })}
+                  </span>
 
-                {snippet.tags.map(category => (
-                  <div
-                    key={category._id}
-                    className='flex  xs:text-[12px] items-center text-primary-black dark:text-gray-400 text-opacity-80'
-                  >
-                    <AiOutlineTags className='mr-1' /> {category.title}
-                  </div>
-                ))}
-              </div>
-            </div>
+                  {snippet.tags.map(category => (
+                    <div
+                      key={category._id}
+                      className='flex  xs:text-[12px] items-center text-primary-black dark:text-gray-400 text-opacity-80'
+                    >
+                      <AiOutlineTags className='mr-1' /> {category.title}
+                    </div>
+                  ))}
+                </div>
+              </Link>
+            </motion.div>
           ))}
 
         {filteredSnippets?.length === 0 && <NoResult />}
