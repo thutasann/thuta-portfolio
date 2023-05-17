@@ -6,10 +6,10 @@ import Layout from '@/components/layout'
 import Repos from '@/components/repos'
 import { textData } from '@/constants/texts'
 import { BsArrowUpRightSquare } from 'react-icons/bs'
-import { getLastestRepos } from '@/utils/getLastestRepos'
 import Link from 'next/link'
 import userData from '@/constants/data'
 import { IRepos } from '@/types/typings'
+import { getLastestRepos } from '@/utils/getLatestRepos'
 
 export default async function Home() {
   const repos: IRepos[] = await getLastestRepos()
