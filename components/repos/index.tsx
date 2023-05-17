@@ -1,3 +1,5 @@
+'use client'
+
 import { IRepos } from '@/types/typings'
 import React from 'react'
 import { GithubIcon } from '../icons'
