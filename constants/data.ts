@@ -11,7 +11,7 @@ const userData = {
   about: {
     metaTitle: 'Thuta Sann | Frontend Dev',
     title:
-      "I'm a developer that loves building NEXTJS, ANGULAR & SpringBoot and IOS Mobile apps. Also loves building UI/UX with TailwindCSS, Material UI, ChakraUI, etc",
+      "I'm a developer that loves building NEXTJS, ANGULAR & SpringBoot and IOS Mobile apps. Also loves building UI/UX with TailwindCSS, Material UI, RadixUI, etc",
     description: [
       `I've been developing websites since I was 18 years old. I started my web development career with HTML, CSS and PHP. and After PHP, I've learnt Laravel web Framework.`,
       `After learning HTML and struggling with CSS, I came up with a brilliant idea of using Bootstrap and Tailwind so that I don't have to style everything by myself and - for obvious reasons - if you knew Tailwind, you were cool. `,
@@ -33,7 +33,6 @@ const userData = {
   },
 }
 
-// 14
 export const projects: IProject[] = [
   {
     id: 3,

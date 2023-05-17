@@ -21,7 +21,7 @@ const Education = (): JSX.Element => {
           style={{
             scaleY: scrollYProgress,
           }}
-          className='absolute left-9 top-0 w-[4px] xs:h-full h-[100vh] bg-dark dark:bg-light origin-top md:w-[2px] md:left-[30px] xs:left-[20px]'
+          className='absolute left-9 top-0 w-[4px] h-[112vh] sm:h-full  bg-dark dark:bg-light origin-top md:w-[2px] md:left-[30px] xs:left-[20px]'
         />
         <ul className='w-full flex flex-col items-start justify-between ml-4'>
           {educations.map(({ type, time, place, info, link }, idx) => (

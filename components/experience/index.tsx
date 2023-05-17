@@ -45,7 +45,7 @@ const ExperienceCard: React.FC<IExperience> = ({ position, company, companyLink,
   const ref = useRef<any>(null)
 
   return (
-    <li ref={ref} className='my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-center justify-between md:w-[80%]'>
+    <li ref={ref} className='my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-start justify-between md:w-[80%]'>
       <Icon reference={ref} />
       <motion.div
         initial={{
