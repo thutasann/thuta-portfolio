@@ -4,7 +4,7 @@ This is my re-built portfolio site with **Nextjs13**, **TailwindCSS** and **Fram
 
 Live URL: <https://thutadev.vercel.app/>
 
-![ThutaDev](/public/demo.png)
+![ThutaDev](/public/examples/demo.png)
 
 ## HighLights
 
