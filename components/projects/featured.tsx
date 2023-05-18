@@ -3,9 +3,8 @@ import BlurImage from '../blur-image'
 import { GithubIcon } from '../icons'
 import ProjectLink from '../project-link'
 import { IProject } from '@/types/typings'
-import Link from 'next/link'
 
-const FeaturedProject = ({ id, summary, category, imgUrl, link, title, github }: IProject): JSX.Element => {
+const FeaturedProject = ({ summary, category, imgUrl, link, title, github }: IProject): JSX.Element => {
   return (
     <article
       className='w-full flex items-center justify-center rounded-[2rem] border border-solid border-dark bg-light shadow-2xl relative p-6 dark:bg-dark dark:border-light
@@ -14,13 +13,15 @@ const FeaturedProject = ({ id, summary, category, imgUrl, link, title, github }:
     >
       <div className='absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-br-3xl  rounded-[2rem] bg-dark dark:bg-light xs:-right-2 xs:h-[102%] xs:w-full xs:w-rounded-[1.5rem]' />
 
-      <Link
-        href={`/projects/photos/${id}`}
+      <a
+        href={link}
+        target='_blank'
+        rel='noopener'
         aria-label={'thutadev projects' + title}
         className='w-1/2 cursor-pointer overflow-hidden relative rounded-lg lg:w-full'
       >
         <BlurImage src={imgUrl} alt={title} width={2844} height={1578} className='hover:scale-110' />
-      </Link>
+      </a>
 
       <div className='w-1/2 flex flex-col items-start justify-between pl-6 lg:w-full lg:pl-0 lg:pt-6'>
         <span className='bg-dark dark:bg-light text-light dark:text-dark px-3 py-1 font-bold rounded-md text-lg xs:text-base'>
