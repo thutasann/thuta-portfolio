@@ -32,13 +32,13 @@ const SnippetList = ({ snippets, tags }: ISnippetList) => {
   }
 
   return (
-    <section className='relative flex md:flex-col w-full flex-row '>
+    <section className='relative flex md:flex-col w-full flex-row'>
       <div className='w-[30%] md:hidden block'>
         <Sidebar tags={tags} />
       </div>
 
       <div className='w-full pl-7 md:pl-0'>
-        <div className='relative mt-5 group'>
+        <div className='relative group'>
           <input
             value={search}
             onChange={e => setSearch(e.target.value)}
