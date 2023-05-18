@@ -54,7 +54,7 @@ export default function ProgressBar() {
     const handleMutation: MutationCallback = () => {
       const anchorElements = document.querySelectorAll('a')
       const filteredATags = Array.from(anchorElements).filter(function (aTag) {
-        return aTag.getAttribute('target') !== '_blank'
+        return aTag.getAttribute('target') !== '_blank' && aTag.getAttribute('href') !== 'mailto:thutasann2002@gmail.com'
       })
 
       filteredATags.forEach(anchor => anchor.addEventListener('click', handleAnchorClick))
