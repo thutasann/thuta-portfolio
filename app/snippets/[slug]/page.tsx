@@ -10,7 +10,6 @@ import { PortableText } from '@portabletext/react'
 import { RichTextComponents } from '@/components/rich-text-component'
 import SnippetDetailHeader from '@/components/snippets/header'
 import Comments from '@/components/snippets/comments'
-import Script from 'next/script'
 
 interface Props {
   params: {
@@ -88,22 +87,6 @@ const SnipppetDetail = async ({ params: { slug } }: Props) => {
 
   return (
     <section className='w-full h-full xl:p-24 lg:p-16 md:p-9 p-32 pt-12'>
-      <script
-        src='https://giscus.app/client.js'
-        data-repo='thutasann/thuta-portfolio'
-        data-repo-id='R_kgDOJY46iA'
-        data-category='[ENTER CATEGORY NAME HERE]'
-        data-category-id='[ENTER CATEGORY ID HERE]'
-        data-mapping='pathname'
-        data-strict='0'
-        data-reactions-enabled='1'
-        data-emit-metadata='0'
-        data-input-position='bottom'
-        data-theme='preferred_color_scheme'
-        data-lang='en'
-        crossOrigin='anonymous'
-        async
-      ></script>
       <article className='pb-28 mt-7'>
         <SnippetDetailHeader snippet={snippet} />
         <div className='text-dark dark:text-light'>
