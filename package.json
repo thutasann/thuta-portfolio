@@ -11,6 +11,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@giscus/react": "^2.2.8",
     "@heroicons/react": "^2.0.18",
     "@portabletext/react": "^3.0.0",
     "@sanity/code-input": "^4.1.1",
