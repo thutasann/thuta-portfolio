@@ -10,6 +10,8 @@ import Script from 'next/script'
 import RecoilWrapper from '@/components/recoil-wrapper'
 import PageProgress from '@/components/progress-bar'
 import ScrollToTop from '@/components/progress-bar/scroll-to-top'
+import CookieBanner from '@/components/layout/cookie'
+import posthog from 'posthog-js'
 
 export const metadata: Metadata = {
   title: userData.about.metaTitle,
@@ -66,6 +68,7 @@ if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.match
   document.documentElement.classList.remove('dark')
 }`}
           </Script>
+          {posthog.has_opted_in_capturing() || posthog.has_opted_out_capturing() ? null : <CookieBanner />}
         </body>
       </RecoilWrapper>
     </html>
