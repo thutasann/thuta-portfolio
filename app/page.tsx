@@ -69,7 +69,7 @@ export default async function Home() {
           <Repos repos={repos} />
         </div>
       </Layout>
-      <HireMe />
+      {/* <HireMe /> */}
     </main>
   )
 }
