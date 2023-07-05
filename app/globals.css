@@ -40,7 +40,7 @@ img::selection {
 }
 
 .mobile-nav {
-  @apply min-w-[70vw] z-[2000] flex flex-col justify-center items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  bg-dark/90 dark:bg-light/75 rounded-lg backdrop-blur-[9px] py-32;
+  @apply min-w-[70vw] z-[2000] flex flex-col justify-center items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  rounded-lg backdrop-blur-[19px] bg-gray-300/50 dark:bg-transparent py-32 border border-gray-50/5;
 }
 
 .sidebar {

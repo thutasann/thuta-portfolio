@@ -20,13 +20,13 @@ const CustomMobileLinks = ({ href, title, className = '', toggle }: ICustomLink)
       href={href}
       prefetch
       onClick={handleClick}
-      className={`${className} relative group uppercase text-[15px] font-[600] text-light/90 dark:text-dark my-2`}
+      className={`${className} relative group uppercase text-[15px] font-[600] text-dark/90 dark:text-light my-2`}
     >
       {title}
       <span
-        className={`h-[1px] inline-block bg-light absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 ${
+        className={`h-[1px] inline-block bg-dark absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 ${
           path === href ? 'w-full' : 'w-0'
-        } dark:bg-dark`}
+        } dark:bg-light`}
       >
         &nbsp;
       </span>

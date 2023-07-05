@@ -57,6 +57,7 @@ interface IProject {
 interface IHumburger {
   onClick: () => void
   isOpen: boolean
+  ref?: any
 }
 
 interface IRepos {

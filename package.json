@@ -4,7 +4,7 @@
   "private": true,
   "author": "thuta_sann<thutasann2002@gmail.com>",
   "scripts": {
-    "dev": "PORT=3001 next dev",
+    "dev": "next dev",
     "build": "next build",
     "postbuild": "next-sitemap",
     "start": "next start",
@@ -30,7 +30,7 @@
     "eslint-config-next": "13.3.0",
     "framer-motion": "^10.12.4",
     "js-cookie": "^3.0.5",
-    "next": "^13.4.6",
+    "next": "^13.4.8",
     "next-sanity": "^4.3.2",
     "next-sitemap": "^4.0.9",
     "nprogress": "^0.2.0",
