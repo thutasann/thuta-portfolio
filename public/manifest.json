@@ -1,0 +1,31 @@
+{
+  "name": "Thuta Sann",
+  "short_name": "thutadev",
+  "description": "I'm a developer that loves building NEXTJS, ANGULAR & SpringBoot and IOS Mobile apps. Also loves building UI/UX with TailwindCSS, Material UI, RadixUI, etc",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#00AEAE",
+  "theme_color": "#1b1b1b",
+  "icons": [
+    {
+      "src": "/thutadev.jpeg",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/thutadev.jpeg",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "/thutadev.jpeg",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "/thutadev.jpeg",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

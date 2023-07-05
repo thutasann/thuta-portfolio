@@ -16,6 +16,7 @@ export const metadata: Metadata = {
   title: userData.about.metaTitle,
   description: userData.about.title,
   keywords: userData.about.keywords,
+  manifest: '/manifest.json',
   openGraph: {
     images: '/thutadev.jpeg',
     type: 'website',
