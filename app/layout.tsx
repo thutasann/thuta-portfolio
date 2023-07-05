@@ -2,7 +2,7 @@
 import userData from '@/constants/data'
 import { Metadata } from 'next'
 import './globals.css'
-import { Poppins } from 'next/font/google'
+import { Poppins, IBM_Plex_Sans } from 'next/font/google'
 import { NavBar } from '@/components/navbar'
 import Footer from '@/components/footer'
 import { Analytics } from '@vercel/analytics/react'
@@ -39,8 +39,8 @@ export const metadata: Metadata = {
   },
 }
 
-const poppin = Poppins({
-  weight: '500',
+const poppin = IBM_Plex_Sans({
+  weight: '700',
   subsets: ['latin'],
   display: 'swap',
 })
@@ -52,7 +52,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <RecoilWrapper>
         <body className='bg-light dark:bg-dark relative'>
           <PageProgress />
-          {/* @ts-ignore */}
           <ScrollToTop />
           <main className={`${poppin.className} relative font-poppins bg-light dark:bg-transparent w-full min-h-screen`}>
             <NavBar />
