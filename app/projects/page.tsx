@@ -52,6 +52,10 @@ const Projects = () => {
               />
             </div>
             <div className='col-span-6 sm:col-span-12'>
+              <Project category={projects[9].category} title={projects[9].title} link={projects[9].link} imgUrl={projects[9].imgUrl} />
+            </div>
+
+            <div className='col-span-6 sm:col-span-12'>
               <Project
                 category={projects[1].category}
                 title={projects[1].title}
@@ -60,6 +64,17 @@ const Projects = () => {
                 github={projects[1].github}
               />
             </div>
+
+            <div className='col-span-6 sm:col-span-12'>
+              <Project
+                category={projects[2].category}
+                title={projects[2].title}
+                link={projects[2].link}
+                imgUrl={projects[2].imgUrl}
+                github={projects[2].github}
+              />
+            </div>
+
             <div className='col-span-6 sm:col-span-12'>
               <Project category={projects[8].category} title={projects[8].title} link={projects[8].link} imgUrl={projects[8].imgUrl} />
             </div>

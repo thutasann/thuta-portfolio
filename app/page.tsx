@@ -1,11 +1,9 @@
 import { AnimatedText } from '@/components/animated-text'
 import BlurImage from '@/components/blur-image'
-import HireMe from '@/components/hire-me'
 import { LinkArrow } from '@/components/icons'
 import Layout from '@/components/layout'
 import Repos from '@/components/repos'
 import { textData } from '@/constants/texts'
-import { BsArrowUpRightSquare } from 'react-icons/bs'
 import Link from 'next/link'
 import userData from '@/constants/data'
 import { IRepos } from '@/types/typings'
@@ -17,9 +15,9 @@ export default async function Home() {
   const repos: IRepos[] = await getLastestRepos()
 
   return (
-    <main className=' flex items-center text-dark w-full min-h-full dark:text-light'>
+    <main className=' flex items-center text-dark w-full min-h-full dark:text-light  max-w-[1400px] mx-auto'>
       <Layout className='pt-0 md:pt-16 sm:pt-8'>
-        <div className='flex items-center justify-between w-full  lg:flex-col max-w-[1400px] mx-auto'>
+        <div className='flex items-center justify-between w-full  lg:flex-col'>
           <div className='w-1/2 md:w-full'>
             <BlurImage className='w-full h-auto md:inline-block md:w-full' src='/thutadev.webp' alt='thutadev' width={1920} height={1920} />
           </div>
@@ -31,7 +29,7 @@ export default async function Home() {
             <p className='my-4 text-base font-medium md:text-sm sm:text-[15px]'>{textData.bannerText.para}</p>
             <div className='flex items-center self-start mt-2 gap-4 lg:self-center'>
               <a
-                href='/cv/Thuta_Sann.pdf'
+                href='/cv/Thuta Sann_Resume.pdf'
                 target='_blank'
                 aria-label='thutasann resume'
                 rel='noopener'
@@ -69,7 +67,6 @@ export default async function Home() {
           <Repos repos={repos} />
         </div>
       </Layout>
-      {/* <HireMe /> */}
     </main>
   )
 }

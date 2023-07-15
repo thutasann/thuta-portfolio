@@ -1,20 +1,16 @@
 'use client'
 
-import userData from '@/constants/data'
 import { navbarLinks } from '@/constants/navbar'
 import React, { useState } from 'react'
-import { GithubIcon, LinkedInIcon, MoonIcon, SunIcon, TwitterIcon } from '../icons'
 import Logo from '../logo'
-import { delay, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 import Hamburger from './hamburger'
 import CustomLinks, { DesktopSocials } from './custom-links'
 import CustomMobileLinks, { MobileSocials } from './custom-mobile-links'
-import { useOutsideClick } from '@/hooks/useClickOutside'
 import { easings } from '@/animations'
 
 export const NavBar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false)
-  const ref = useOutsideClick(() => setIsOpen(false))
 
   const handleClick = () => {
     setIsOpen(prev => !prev)
@@ -23,18 +19,20 @@ export const NavBar = () => {
   return (
     <>
       <header className='nav'>
-        <Hamburger onClick={handleClick} isOpen={isOpen} />
-        <div className='w-full flex justify-between items-center lg:hidden '>
-          <nav>
-            {navbarLinks.map((link, idx) => (
-              <CustomLinks href={link.link} title={link.text} className='mx-4' key={idx} />
-            ))}
-          </nav>
-          <DesktopSocials />
-        </div>
+        <div className='flex items-center justify-between max-w-[1400px] mx-auto'>
+          <Hamburger onClick={handleClick} isOpen={isOpen} />
+          <div className='w-full flex justify-between items-center lg:hidden '>
+            <nav>
+              {navbarLinks.map((link, idx) => (
+                <CustomLinks href={link.link} title={link.text} className='mx-4' key={idx} />
+              ))}
+            </nav>
+            <DesktopSocials />
+          </div>
 
-        <div className='absolute left-[50%] top-2 translate-x-[-50%]'>
-          <Logo />
+          <div className='absolute left-[50%] top-2 translate-x-[-50%]'>
+            <Logo />
+          </div>
         </div>
       </header>
 

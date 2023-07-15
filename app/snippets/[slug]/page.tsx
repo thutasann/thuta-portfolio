@@ -86,7 +86,7 @@ const SnipppetDetail = async ({ params: { slug } }: Props) => {
   const snippet: Snippet = await client.fetch(query, { slug })
 
   return (
-    <section className='w-full h-full xl:p-24 lg:p-16 md:p-9 p-32 pt-12'>
+    <section className='w-full max-w-[1400px] mx-auto h-full xl:p-24 lg:p-16 md:p-9 p-32 pt-12'>
       <article className='pb-28 mt-7'>
         <SnippetDetailHeader snippet={snippet} />
         <div className='text-dark dark:text-light'>

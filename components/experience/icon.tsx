@@ -1,16 +1,11 @@
 import React from 'react'
-import { motion, useScroll } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 interface IIcon {
   reference: any
 }
 
 export const Icon = ({ reference }: IIcon) => {
-  const { scrollYProgress } = useScroll({
-    target: reference,
-    offset: ['center end', 'center center'],
-  })
-
   return (
     <figure className='absolute left-0 stroke-dark'>
       <svg className='-rotate-90 md:w-[60px] md:h-[60px] xs:w-[40px] xs:h-[40px]' width='75' height='75' viewBox='0 0 100 100'>

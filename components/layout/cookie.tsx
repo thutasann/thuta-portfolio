@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useEffect, useState, MouseEvent } from 'react'
+import React, { useEffect, useState } from 'react'
 import { SiCookiecutter } from 'react-icons/si'
 import { IoCloseOutline } from 'react-icons/io5'
 import Cookies from 'js-cookie'
@@ -18,7 +18,7 @@ const CookieBanner = () => {
     setCookieConsentIsTrue(consentIsTrue)
   }, [])
 
-  const handleAccept = (e: MouseEvent<HTMLButtonElement>) => {
+  const handleAccept = () => {
     setClose(true)
 
     if (!cookieConsentIsTrue) {

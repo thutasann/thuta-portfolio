@@ -2,7 +2,7 @@
 import userData from '@/constants/data'
 import { Metadata } from 'next'
 import './globals.css'
-import { Poppins, IBM_Plex_Sans } from 'next/font/google'
+import { IBM_Plex_Sans } from 'next/font/google'
 import { NavBar } from '@/components/navbar'
 import Footer from '@/components/footer'
 import { Analytics } from '@vercel/analytics/react'

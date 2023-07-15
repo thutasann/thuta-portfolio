@@ -6,7 +6,6 @@ import React from 'react'
 import { AiOutlineTags } from 'react-icons/ai'
 import { HiMenuAlt1 } from 'react-icons/hi'
 import { tagState } from '@/atoms/states'
-import { MagnifyingGlassIcon } from '@heroicons/react/24/solid'
 
 interface ISidebar {
   tags: CodeCategory[]

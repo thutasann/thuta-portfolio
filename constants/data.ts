@@ -18,7 +18,7 @@ const userData = {
       `But now, I've been coding in Reactjs, React Native, Nextjs, Nestjs, MongoDB, MySQL, Tailwind, Nodejs programming languages etc to name a few. Although I barely know the syntax (Psst, Stack overflow!), I consider myself a Ninja developer I'm laughing right now.
       Now, I'm currently learning MERN Stack as Full Stack Development and React Native as Hybrid App Development while Exploring deeply to NextJs.`,
     ],
-    keywords: ['Thuta Sann', 'thutadev', 'Thuta Dev', 'Thutasann Developer'],
+    keywords: ['Thuta Sann', 'thutadev', 'Thuta Dev', 'thuta dev', 'Thutasann Developer'],
     currentProject: 'UIKit Netflix Clone',
     currentProjectUrl: 'https://www.linkedin.com/feed/update/urn:li:activity:6997520383801270272/',
   },
@@ -55,9 +55,9 @@ export const projects: IProject[] = [
   {
     id: 5,
     category: 'Next.js',
-    title: 'Current Portfolio site',
+    title: 'Personal Portfolio site',
     link: 'https://thutadev.vercel.app/',
-    imgUrl: '/projects/thutasann.png',
+    imgUrl: '/projects/portfolio.png',
     github: 'https://github.com/thutasann/thuta-portfolio',
   },
   {
@@ -109,10 +109,10 @@ export const projects: IProject[] = [
   },
   {
     id: 12,
-    category: 'Angular',
-    title: 'Angular GameDB App',
-    link: 'https://videogame-tts.vercel.app/',
-    imgUrl: '/projects/gamedbclone.png',
+    category: 'Gatsby.js',
+    title: 'Digital Laboratory Website',
+    link: 'https://digitallaboratory.net/',
+    imgUrl: '/projects/digital-lab.png',
   },
   {
     id: 13,

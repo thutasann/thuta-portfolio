@@ -7,7 +7,6 @@ import Skills from '@/components/skills'
 import Statistics from '@/components/statistics'
 import userData from '@/constants/data'
 import { Metadata } from 'next'
-import Link from 'next/link'
 import React from 'react'
 
 export const metadata: Metadata = {
@@ -40,7 +39,7 @@ export const metadata: Metadata = {
 const AboutPage = () => {
   return (
     <>
-      <main className='flex w-full flex-col items-center justify-center '>
+      <main className='flex w-full max-w-[1400px] mx-auto flex-col items-center justify-center '>
         <Layout className='pt-16'>
           <AnimatedText text='Passion Fuels Purpose! ' className='mb-16 lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8' />
 

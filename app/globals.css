@@ -36,7 +36,7 @@ img::selection {
 }
 
 .nav {
-  @apply w-full top-0 z-[100] px-32 lg:px-16 md:px-12 sm:px-8  py-7 lg:py-9 font-medium flex items-center justify-between  backdrop-blur-[9px] dark:text-light sticky;
+  @apply w-full top-0 z-[100] px-32 lg:px-16 md:px-12 sm:px-8  py-7 lg:py-9 font-medium   backdrop-blur-[9px] dark:text-light sticky;
 }
 
 .mobile-nav {
