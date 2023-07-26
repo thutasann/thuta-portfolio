@@ -4,11 +4,6 @@ import axios from 'axios'
 export async function getLastestRepos() {
   const token = process.env.GITHUB_TOKEN
 
-  //   const headers = {
-  //     Authorization: `Bearer ${token}`,
-  //     'Content-Type': 'application/json',
-  //   }
-
   const repos: IRepos[] = await axios
     .get('https://api.github.com/users/thutasann/repos?sort=author-date-asc', {
       headers: {

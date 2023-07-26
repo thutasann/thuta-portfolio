@@ -16,13 +16,10 @@ const userData = {
       `I've been developing websites since I was 18 years old. I started my web development career with HTML, CSS and PHP. and After PHP, I've learnt Laravel web Framework.`,
       `After learning HTML and struggling with CSS, I came up with a brilliant idea of using Bootstrap and Tailwind so that I don't have to style everything by myself and - for obvious reasons - if you knew Tailwind, you were cool. `,
       `But now, I've been coding in Reactjs, React Native, Nextjs, Nestjs, MongoDB, MySQL, Tailwind, Nodejs programming languages etc to name a few. Although I barely know the syntax (Psst, Stack overflow!), I consider myself a Ninja developer I'm laughing right now.
-      Now, I'm currently learning MERN Stack as Full Stack Development and React Native as Hybrid App Development while Exploring deeply to NextJs.`,
+      Now, I'm currently learning MERN Stack as Full Stack Development, Nestjs as Backend Development and React Native as Hybrid App Development while Exploring deeply to NextJs.`,
     ],
     keywords: ['Thuta Sann', 'thutadev', 'Thuta Dev', 'thuta dev', 'Thutasann Developer'],
-    currentProject: 'UIKit Netflix Clone',
-    currentProjectUrl: 'https://www.linkedin.com/feed/update/urn:li:activity:6997520383801270272/',
   },
-  resumeUrl: 'https://drive.google.com/file/d/11CVNmYzbdW2OCROig8gHbPJvThP9mMZB/view?usp=sharing',
 
   socialLinks: {
     instagram: 'https://www.instagram.com/thuta_sann/',
@@ -298,6 +295,11 @@ export const SkillsData: ISkill[] = [
 export const techStacks = [
   {
     src: 'nextjs.webp',
+    width: 500,
+    height: 500,
+  },
+  {
+    src: 'nestjs.svg',
     width: 500,
     height: 500,
   },

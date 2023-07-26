@@ -28,6 +28,7 @@ function BlurImage({ src, alt, fill, className, width, height, priority, ...prop
       height={height}
       placeholder='blur'
       blurDataURL={src}
+      loading='lazy'
       className={cn('transition-all duration-700 ease-in-out', isLoading ? 'blur-md' : 'blur-0', className!)}
       onLoadingComplete={() => setLoading(false)}
       alt={alt}
