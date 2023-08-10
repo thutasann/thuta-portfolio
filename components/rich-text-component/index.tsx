@@ -17,11 +17,11 @@ export const RichTextComponents = {
     number: ({ children }: any) => <ol className='list-decimal mt-lg'>{children}</ol>,
   },
   block: {
-    h1: ({ children }: any) => <h1 className='text-dark dark:text-light text-5xl md:text-3xl font-[800]'>{children}</h1>,
+    h1: ({ children }: any) => <h1 className='text-dark dark:text-light text-5xl md:text-3xl font-[800] mb-4'>{children}</h1>,
     h2: ({ children }: any) => <h2 className='text-dark dark:text-light text-4xl font-bold py-7'>{children}</h2>,
     h3: ({ children }: any) => <h3 className='text-dark dark:text-light text-3xl font-bold py-7'>{children}</h3>,
     h4: ({ children }: any) => <h4 className='text-dark dark:text-light text-2xl font-bold py-7'>{children}</h4>,
-    p: ({ children }: any) => <p className='text-dark dark:text-light text-2xl font-bold text-justify py-7'>{children}</p>,
+    p: ({ children }: any) => <p className='text-dark dark:text-light text-2xl font-bold text-justify mt-7'>{children}</p>,
     blockquote: ({ children }: any) => <blockquote className='py-5 pl-5 my-5 border-l-4 border-l-primary'>{children}</blockquote>,
   },
   marks: {

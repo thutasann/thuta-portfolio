@@ -16,7 +16,13 @@ const Project = ({ category, imgUrl, title, link, github }: IProject) => {
         aria-label={'thutadev projects' + title}
         className='w-full cursor-pointer overflow-hidden relative rounded-lg'
       >
-        <BlurImage src={imgUrl} alt={title} width={2844} height={1578} className='hover:scale-110' />
+        <BlurImage
+          src={imgUrl}
+          alt={title}
+          width={2844}
+          height={1578}
+          className='hover:scale-110 transition-all duration-500 ease-in-out'
+        />
       </a>
 
       <div className='w-full mt-4 flex flex-col items-start justify-between '>
