@@ -7,7 +7,6 @@ import { FaTwitterSquare } from 'react-icons/fa'
 import CustomCopyToClipboard from '../copy-to-clipboard'
 import Image from 'next/image'
 import urlFor from '@/utils/urlFor'
-import BlurImage from '../blur-image'
 import { useSetRecoilState } from 'recoil'
 import { tagState } from '@/atoms/states'
 import { useRouter } from 'next/navigation'
@@ -64,13 +63,7 @@ const SnippetDetailHeader: React.FC<ISnippetDetailHeader> = ({ snippet }) => {
               <h1 className='text-4xl md:text-3xl font-extrabold text-dark dark:text-light'>{snippet.title}</h1>
             </div>
             <div className='flex items-center space-x-2'>
-              <BlurImage
-                className='rounded-full'
-                src={urlFor(snippet.author.image).url()}
-                alt={snippet.author.name}
-                height={40}
-                width={40}
-              />
+              <Image className='rounded-full' src={urlFor(snippet.author.image).url()} alt={snippet.author.name} height={40} width={40} />
               <div className='w-64'>
                 <p className='text-lg font-bold text-dark/80 dark:text-light'>{snippet.author.name}</p>
                 <div></div>
