@@ -1,11 +1,5 @@
-'use client'
-
+import getBase64 from '@/utils/getBase64'
 import Image from 'next/image'
-import { useState } from 'react'
-
-function cn(...classes: string[]) {
-  return classes.filter(Boolean).join(' ')
-}
 
 interface IBlurImage {
   src: string
@@ -17,8 +11,10 @@ interface IBlurImage {
   priority?: boolean
 }
 
-function BlurImage({ src, alt, fill, className, width, height, priority, ...props }: IBlurImage): JSX.Element {
-  const [isLoading, setLoading] = useState(true)
+// @ts-ignore
+async function BlurImage({ src, alt, fill, className, width, height, priority, ...props }: IBlurImage): any {
+  const domain = process.env.NEXT_PUBLIC_DOMAIN_URL
+  const myBlurDataUrl = await getBase64(`${domain}${src}`)
 
   return (
     <Image
@@ -27,10 +23,9 @@ function BlurImage({ src, alt, fill, className, width, height, priority, ...prop
       width={width}
       height={height}
       placeholder='blur'
-      blurDataURL={src}
+      blurDataURL={myBlurDataUrl}
       loading='lazy'
-      className={cn('transition-all duration-700 ease-in-out', isLoading ? 'blur-md' : 'blur-0', className!)}
-      onLoadingComplete={() => setLoading(false)}
+      className={className}
       alt={alt}
       fill={fill}
       priority={priority}

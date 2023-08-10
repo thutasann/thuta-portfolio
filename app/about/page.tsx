@@ -60,6 +60,7 @@ const AboutPage = () => {
 
             <Statistics />
           </div>
+          {/* @ts-expect-error Server Component */}
           <Skills />
           <Experience />
           <Education />
