@@ -1,6 +1,7 @@
-import { usePathname, useRouter } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 import React from 'react'
-import { GithubIcon, LinkedInIcon, MoonIcon, SunIcon, TwitterIcon } from '../icons'
+import { GithubIcon, LinkedInIcon } from '../icons'
+import { BsFillMoonStarsFill, BsFillSunFill, BsTwitter } from 'react-icons/bs'
 import { motion } from 'framer-motion'
 import userData from '@/constants/data'
 import UseThemeSwitcher from '@/hooks/useThemeSwitcher'
@@ -9,7 +10,6 @@ import Link from 'next/link'
 
 const CustomMobileLinks = ({ href, title, className = '', toggle }: ICustomLink) => {
   const path = usePathname()
-  const router = useRouter()
 
   const handleClick = () => {
     toggle()
@@ -81,7 +81,7 @@ export const MobileSocials = () => {
         aria-label='ThutaDev Twitter'
         rel='noopener'
       >
-        <TwitterIcon className='w-6 ml-3' />
+        <BsTwitter color='#55acee' className='w-7 h-7 ml-3' />
       </motion.a>
 
       <button
@@ -93,7 +93,7 @@ export const MobileSocials = () => {
           mode === 'light' ? 'bg-dark text-light' : 'bg-light text-dark'
         }`}
       >
-        {mode === 'dark' ? <SunIcon className='fill-dark' /> : <MoonIcon className='fill-dark' />}
+        {mode === 'dark' ? <BsFillSunFill className='fill-dark' /> : <BsFillMoonStarsFill className='fill-white' />}
       </button>
     </nav>
   )

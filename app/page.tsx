@@ -1,6 +1,5 @@
 import { AnimatedText } from '@/components/animated-text'
 import BlurImage from '@/components/blur-image'
-import { LinkArrow } from '@/components/icons'
 import Layout from '@/components/layout'
 import Repos from '@/components/repos'
 import { textData } from '@/constants/texts'
@@ -8,8 +7,7 @@ import Link from 'next/link'
 import userData from '@/constants/data'
 import { IRepos } from '@/types/typings'
 import { getLastestRepos } from '@/utils/getLatestRepos'
-
-export const revalidate = 30
+import { RiShareBoxFill } from 'react-icons/ri'
 
 export default async function Home() {
   const repos: IRepos[] = await getLastestRepos()
@@ -36,7 +34,7 @@ export default async function Home() {
                 download={true}
                 className='btnResume'
               >
-                Resume <LinkArrow className='w-6 ml-1' />
+                Resume <RiShareBoxFill className='w-6 ml-1' />
               </a>
               <Link className='btnContact' href='mailto:thutasann2002@gmail.com'>
                 Contact

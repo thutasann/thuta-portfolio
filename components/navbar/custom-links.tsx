@@ -1,7 +1,8 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React from 'react'
-import { GithubIcon, LinkedInIcon, MoonIcon, SunIcon, TwitterIcon } from '../icons'
+import { GithubIcon, LinkedInIcon } from '../icons'
+import { BsFillMoonStarsFill, BsFillSunFill, BsTwitter } from 'react-icons/bs'
 import { motion } from 'framer-motion'
 import userData from '@/constants/data'
 import UseThemeSwitcher from '@/hooks/useThemeSwitcher'
@@ -71,7 +72,7 @@ export const DesktopSocials = () => {
         aria-label='ThutaDev Twitter'
         rel='noopener'
       >
-        <TwitterIcon className='w-6 ml-3' />
+        <BsTwitter color='#55acee' className='w-7 h-7 ml-3' />
       </motion.a>
 
       <button
@@ -79,11 +80,11 @@ export const DesktopSocials = () => {
         onClick={() => {
           setMode(mode === 'light' ? 'dark' : 'light')
         }}
-        className={`cursor-pointer ml-8 flex items-center justify-center rounded-full p-1 ${
+        className={`cursor-pointer ml-5 flex items-center justify-center rounded-full p-1 ${
           mode === 'light' ? 'bg-dark text-light' : 'bg-light text-dark'
         }`}
       >
-        {mode === 'dark' ? <SunIcon className='fill-dark' /> : <MoonIcon className='fill-dark' />}
+        {mode ? mode === 'dark' ? <BsFillSunFill className='fill-dark' /> : <BsFillMoonStarsFill className='fill-white' /> : null}
       </button>
     </nav>
   )

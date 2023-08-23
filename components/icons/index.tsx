@@ -1,6 +1,8 @@
-//@ts-nocheck
-
 import * as React from 'react'
+
+interface IIcons {
+  className?: string
+}
 
 export const GithubIcon = ({ className, ...rest }: IIcons) => (
   <svg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 512 512' {...rest} className={`w-full h-auto ${className}`}>
@@ -57,7 +59,7 @@ export const DribbbleIcon = ({ className, ...rest }: IIcons) => (
   </svg>
 )
 
-export const SunIcon = ({ className, ...rest }) => (
+export const SunIcon = ({ className, ...rest }: IIcons) => (
   <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' {...rest} className={`w-full h-auto ${className}`}>
     <g fill='none' stroke='currentColor' strokeLinecap='round' strokeLinejoin='round' strokeWidth='2'>
       <g strokeDasharray='2'>
@@ -72,9 +74,7 @@ export const SunIcon = ({ className, ...rest }) => (
         fill='currentColor'
         d='M7 6 C7 12.08 11.92 17 18 17 C18.53 17 19.05 16.96 19.56 16.89 C17.95 19.36 15.17 21 12 21 C7.03 21 3 16.97 3 12 C3 8.83 4.64 6.05 7.11 4.44 C7.04 4.95 7 5.47 7 6 Z'
         opacity='0'
-      >
-        <set attributeName='opacity' begin='0.5s' to='1' />
-      </path>
+      ></path>
     </g>
     <g fill='currentColor' fillOpacity='0'>
       <path d='m15.22 6.03l2.53-1.94L14.56 4L13.5 1l-1.06 3l-3.19.09l2.53 1.94l-.91 3.06l2.63-1.81l2.63 1.81z'>
@@ -157,13 +157,12 @@ export const SunIcon = ({ className, ...rest }) => (
       </circle>
     </mask>
     <circle cx='12' cy='12' r='6' fill='currentColor' mask='url(#lineMdSunnyFilledLoopToMoonFilledLoopTransition1)'>
-      <set attributeName='opacity' begin='0.5s' to='0' />
       <animate fill='freeze' attributeName='r' begin='0.1s' dur='0.4s' values='6;10' />
     </circle>
   </svg>
 )
 
-export const MoonIcon = ({ className, ...rest }) => (
+export const MoonIcon = ({ className, ...rest }: IIcons) => (
   <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' {...rest} className={`w-full h-auto ${className}`}>
     <rect x='0' y='0' width='24' height='24' fill='rgba(255, 255, 255, 0)' />
     <g fill='none' stroke='currentColor' strokeDasharray='2' strokeDashoffset='2' strokeLinecap='round' strokeWidth='2'>
@@ -199,7 +198,6 @@ export const MoonIcon = ({ className, ...rest }) => (
     </g>
     <g fill='currentColor' stroke='currentColor' strokeLinecap='round' strokeLinejoin='round' strokeWidth='2'>
       <path d='M7 6 C7 12.08 11.92 17 18 17 C18.53 17 19.05 16.96 19.56 16.89 C17.95 19.36 15.17 21 12 21 C7.03 21 3 16.97 3 12 C3 8.83 4.64 6.05 7.11 4.44 C7.04 4.95 7 5.47 7 6 Z' />
-      <set attributeName='opacity' begin='0.6s' to='0' />
     </g>
     <mask id='lineMdMoonFilledToSunnyFilledLoopTransition0'>
       <circle cx='12' cy='12' r='12' fill='#fff' />
@@ -215,7 +213,6 @@ export const MoonIcon = ({ className, ...rest }) => (
       </circle>
     </mask>
     <circle cx='12' cy='12' r='10' fill='currentColor' mask='url(#lineMdMoonFilledToSunnyFilledLoopTransition0)' opacity='0'>
-      <set attributeName='opacity' begin='0.6s' to='1' />
       <animate fill='freeze' attributeName='r' begin='0.6s' dur='0.4s' values='10;6' />
     </circle>
   </svg>
