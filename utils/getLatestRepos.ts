@@ -1,3 +1,5 @@
+'use server'
+
 import { IRepos } from '@/types/typings'
 import axios from 'axios'
 

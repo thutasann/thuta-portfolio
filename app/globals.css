@@ -62,7 +62,7 @@ img::selection {
   @apply font-[700] text-xl mb-4 dark:text-light text-dark;
 }
 .snippet p {
-  @apply text-[15px] text-dark dark:text-gray-400 text-opacity-70 italic;
+  @apply text-[15px]  text-dark dark:text-gray-400 text-opacity-70 italic;
 }
 
 .icons {

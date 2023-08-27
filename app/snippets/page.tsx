@@ -2,7 +2,7 @@ import { AnimatedText } from '@/components/animated-text'
 import Layout from '@/components/layout'
 import userData from '@/constants/data'
 import { Metadata } from 'next'
-import React from 'react'
+import React, { Fragment } from 'react'
 import { groq } from 'next-sanity'
 import { client } from '@/utils/sanity.client'
 import SnippetList from '@/components/snippets/snippet-list'
@@ -49,21 +49,19 @@ const tagsQuery = groq`
     } | order(_createdAt desc)
 `
 
-export const revalidate = 30
-
 const Articles = async () => {
   const snippets = await client.fetch(query)
   const tags = await client.fetch(tagsQuery)
 
   return (
-    <>
+    <Fragment>
       <main className='w-full max-w-[1400px] mx-auto mb-16 flex flex-col items-center justify-center'>
         <Layout className='pt-16'>
           <AnimatedText text='Snippets' className='mb-16 lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8' />
           <SnippetList snippets={snippets} tags={tags} />
         </Layout>
       </main>
-    </>
+    </Fragment>
   )
 }
 

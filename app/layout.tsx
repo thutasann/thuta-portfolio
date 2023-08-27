@@ -2,7 +2,7 @@
 import userData from '@/constants/data'
 import { Metadata } from 'next'
 import './globals.css'
-import { IBM_Plex_Sans } from 'next/font/google'
+import { Poppins } from 'next/font/google'
 import { NavBar } from '@/components/navbar'
 import Footer from '@/components/footer'
 import { Analytics } from '@vercel/analytics/react'
@@ -40,10 +40,10 @@ export const metadata: Metadata = {
   },
 }
 
-const poppin = IBM_Plex_Sans({
+const poppin = Poppins({
   weight: '700',
-  subsets: ['latin'],
-  display: 'swap',
+  subsets: ['latin-ext'],
+  display: 'auto',
 })
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

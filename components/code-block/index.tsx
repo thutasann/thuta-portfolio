@@ -9,7 +9,7 @@ type Props = {
 
 function CodeBlock({ snippet }: Props) {
   return (
-    <div className='p-4 bg-codeBlock mt-7 border border-dark dark:border-light/90 rounded-[30px] hover:rounded-[20px] transition-all duration-500 ease-in-out'>
+    <div className='p-4 bg-codeBlock mt-7 border border-dark dark:border-light/90 rounded-[30px] hover:rounded-[20px] transition-all duration-500 ease-in-out font-[500]'>
       <CopyBlock
         text={snippet.code.code}
         language={snippet.code.language}

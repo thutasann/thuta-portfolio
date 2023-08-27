@@ -29,12 +29,16 @@ const Sidebar = ({ tags }: ISidebar) => {
         <ul>
           <li className='group' onClick={() => handleSelect('all')}>
             <HiMenuAlt1 className={`w-6 h-6 -ml-2 mr-2 ${tag === 'all' ? 'fill-primary' : 'fill-dark dark:fill-light'}`} />
-            <span className={`${tag === 'all' && 'text-primary'}`}>All</span>
+            <span className={`group-hover:text-primary ${tag === 'all' && 'text-primary'}`}>All</span>
           </li>
           {tags.map((item, idx) => (
             <li key={idx} className='group' onClick={() => handleSelect(item.title)}>
-              <HiMenuAlt1 className={`w-6 h-6 -ml-2 mr-2 ${tag === item.title ? 'fill-primary' : 'fill-dark dark:fill-light'}`} />
-              <span className={` ${tag === item.title && 'text-primary'}`}> {item.title}</span>
+              <HiMenuAlt1
+                className={`w-6 h-6 -ml-2 mr-2 group-hover:text-primary ${
+                  tag === item.title ? 'fill-primary' : 'fill-dark dark:fill-light'
+                }`}
+              />
+              <span className={`group-hover:text-primary ${tag === item.title && 'text-primary'}`}> {item.title}</span>
             </li>
           ))}
         </ul>
