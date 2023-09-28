@@ -70,6 +70,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
   }
 }
+export const revalidate = 30
 
 const SnipppetDetail = async ({ params: { slug } }: Props) => {
   const query = groq`
