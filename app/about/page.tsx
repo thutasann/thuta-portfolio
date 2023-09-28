@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   },
 }
 
-const AboutPage = () => {
+const AboutPage = async () => {
   return (
     <>
       <main className='flex w-full max-w-[1400px] mx-auto flex-col items-center justify-center '>

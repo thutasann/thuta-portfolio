@@ -49,6 +49,8 @@ const tagsQuery = groq`
     } | order(_createdAt desc)
 `
 
+export const revalidate = 30
+
 const Articles = async () => {
   const snippets = await client.fetch(query)
   const tags = await client.fetch(tagsQuery)
