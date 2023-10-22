@@ -9,6 +9,8 @@ import { IRepos } from '@/types/typings'
 import { getLastestRepos } from '@/utils/getLatestRepos'
 import { RiShareBoxFill } from 'react-icons/ri'
 
+export const revalidate = 30
+
 export default async function Home() {
   const repos: IRepos[] = await getLastestRepos()
 
