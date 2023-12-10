@@ -165,10 +165,18 @@ export const projects: IProject[] = [
 
 export const experiences: IExperience[] = [
   {
+    position: 'Software Developer',
+    company: 'Genesiv',
+    companyLink: 'https://genesiv.com/',
+    time: '2023 - Present',
+    address: 'Singapore',
+    work: 'Software developer who is responsible for building complex real time web-based application with Angular, Nextjs, Nodejs, Nestjs',
+  },
+  {
     position: 'Frontend Developer',
     company: 'Codigo',
     companyLink: 'https://www.codigo.co/',
-    time: '2022 - Present',
+    time: '2022 - 2023',
     address: 'Singapore',
     work: 'Frontend Developer who is responsible for Website Development and PWA Development with ReactJS and NextJS.',
   },

@@ -51,6 +51,8 @@ const tagsQuery = groq`
 
 export const revalidate = 30
 
+export const dynamic = 'force-static'
+
 const Articles = async () => {
   const snippets = await client.fetch(query)
   const tags = await client.fetch(tagsQuery)

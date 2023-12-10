@@ -71,6 +71,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 export const revalidate = 30
+export const dynamic = 'force-static'
 
 const SnipppetDetail = async ({ params: { slug } }: Props) => {
   const query = groq`

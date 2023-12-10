@@ -9,8 +9,6 @@ import { IRepos } from '@/types/typings'
 import { getLastestRepos } from '@/utils/getLatestRepos'
 import { RiShareBoxFill } from 'react-icons/ri'
 
-export const revalidate = 30
-
 export default async function Home() {
   const repos: IRepos[] = await getLastestRepos()
 
@@ -29,7 +27,7 @@ export default async function Home() {
             <p className='my-4 text-base font-medium md:text-sm sm:text-[15px]'>{textData.bannerText.para}</p>
             <div className='flex items-center self-start mt-2 gap-4 lg:self-center'>
               <a
-                href='/cv/Thuta Sann_Resume.pdf'
+                href='/cv/Thuta_Sann.pdf'
                 target='_blank'
                 aria-label='thutasann resume'
                 rel='noopener'
