@@ -8,12 +8,12 @@ const withPWA = require('next-pwa')({
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
-  experimental: {
-    serverActions: true,
-  },
   images: {
-    domains: ['cdn.sanity.io'],
+    remotePatterns: [
+      {
+        hostname: 'cdn.sanity.io',
+      },
+    ],
   },
 }
 

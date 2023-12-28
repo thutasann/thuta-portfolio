@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { getServerSideSitemap } from 'next-sitemap'
 import { groq } from 'next-sanity'
 import { Snippet } from '../../../types/typings'

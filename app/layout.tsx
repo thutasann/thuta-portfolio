@@ -11,6 +11,7 @@ import RecoilWrapper from '@/components/recoil-wrapper'
 import PageProgress from '@/components/progress-bar'
 import ScrollToTop from '@/components/progress-bar/scroll-to-top'
 import CookieBanner from '@/components/layout/cookie'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 export const metadata: Metadata = {
   title: userData.about.metaTitle,
@@ -46,10 +47,13 @@ const poppin = Poppins({
   display: 'fallback',
 })
 
+export const dynamic = 'force-static'
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='en' about='thutadev portfolio'>
       <Analytics />
+      <SpeedInsights />
       <RecoilWrapper>
         <body className='bg-light dark:bg-dark relative'>
           <PageProgress />
