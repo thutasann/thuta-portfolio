@@ -36,6 +36,8 @@ export const metadata: Metadata = {
   },
 }
 
+export const dynamic = 'force-static'
+
 const AboutPage = async () => {
   return (
     <>

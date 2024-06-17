@@ -5,18 +5,18 @@ const userData = {
   name: 'THUTA SANN',
   designation: 'PASSIONATE CODER',
   email: 'thutasann2002@gmail.com',
-  phone: '+95 9895388882',
-  address: 'S/Okkalpa, Yangon, Myanmar',
+  phone: '+65 86952624',
+  address: 'YISHUN AVE 6, SINGAPORE',
 
   about: {
-    metaTitle: 'Thuta Sann | Frontend Dev',
+    metaTitle: 'Thuta Sann | Software Developer',
     title:
-      "I'm a developer that loves building NEXTJS, ANGULAR & SpringBoot and IOS Mobile apps. Also loves building UI/UX with TailwindCSS, Material UI, RadixUI, etc",
+      "I'm a Software Developer who Passionate about crafting full-stack applications with React/Next.js, Angular, Node.js/NestJS, and .NET. Enthusiast for designing sleek, modern interfaces using the latest UI/UX frameworks.",
     description: [
       `I've been developing websites since I was 18 years old. I started my web development career with HTML, CSS and PHP. and After PHP, I've learnt Laravel web Framework.`,
       `After learning HTML and struggling with CSS, I came up with a brilliant idea of using Bootstrap and Tailwind so that I don't have to style everything by myself and - for obvious reasons - if you knew Tailwind, you were cool. `,
-      `But now, I've been coding in Reactjs, React Native, Nextjs, Nestjs, MongoDB, MySQL, Tailwind, Nodejs programming languages etc to name a few. Although I barely know the syntax (Psst, Stack overflow!), I consider myself a Ninja developer I'm laughing right now.
-      Now, I'm currently learning MERN Stack as Full Stack Development, Nestjs as Backend Development and React Native as Hybrid App Development while Exploring deeply to NextJs.`,
+      `But now, I've been coding in Reactjs, React Native, Nextjs, Nestjs, MongoDB, MySQL, Tailwind, Nodejs, C# and .NETCore Tech stacks etc to name a few. Although I barely know the syntax (Psst, Stack overflow!), I consider myself a Ninja developer I'm laughing right now.
+      Now, I'm currently learning MERN Stack and .NET Core as Full Stack Development, Nestjs as Backend Development and React Native as Hybrid App Development while Exploring deeply to React/NextJs.`,
     ],
     keywords: ['Thuta Sann', 'thutadev', 'Thuta Dev', 'thuta dev', 'Thutasann Developer'],
   },
@@ -166,8 +166,8 @@ export const projects: IProject[] = [
 export const experiences: IExperience[] = [
   {
     position: 'Software Developer',
-    company: 'Genesiv',
-    companyLink: 'https://genesiv.com/',
+    company: 'Rockqet',
+    companyLink: 'https://rockqet.com/',
     time: '2023 - Present',
     address: 'Singapore',
     work: 'Software developer who is responsible for building complex real time web-based application with Angular, Nextjs, Nodejs, Nestjs',
